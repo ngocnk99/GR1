@@ -1,0 +1,196 @@
+import ValidateJoi, { noArguments } from '../utils/validateJoi';
+import regexPattern from '../utils/regexPattern';
+import viMessage from '../locales/vi';
+import { sequelize } from '../db/db';
+
+const DEFAULT_SCHEMA = {
+  name: ValidateJoi.createSchemaProp({
+    string: noArguments,
+    label: viMessage['api.menus.name'],
+  }),
+  url: ValidateJoi.createSchemaProp({
+    string: noArguments,
+    label: viMessage['api.menus.url'],
+    allow: ['', null],
+  }),
+  // icon: ValidateJoi.createSchemaProp({
+  //   string: noArguments,
+  //   label: viMessage['api.menus.icon'],
+  //   allow: ['', null],
+  // }),
+  sitesId: ValidateJoi.createSchemaProp({
+    number: noArguments,
+    label: viMessage.sitesId,
+    integer: noArguments,
+  }),
+  parentId: ValidateJoi.createSchemaProp({
+    number: noArguments,
+    label: viMessage['api.menus.parentId'],
+    integer: noArguments,
+  }),
+  usersCreatorId: ValidateJoi.createSchemaProp({
+    number: noArguments,
+    label: viMessage.usersCreatorId,
+  }),
+  status: ValidateJoi.createSchemaProp({
+    boolean: noArguments,
+    label: viMessage.status,
+  }),
+};
+
+export default {
+  authenCreate: (req, res, next) => {
+    console.log("validate authenCreate")
+    const usersCreatorId = req.auth.userId;
+
+    const { name, url, sitesId, parentId, status } = req.body;
+    const menu = { name, url, sitesId, parentId, status, usersCreatorId };
+
+    const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
+      name: {
+        max: 100,
+        required: noArguments
+      },
+      url: {
+        max: 200,
+      },
+      sitesId: {
+        required: noArguments
+      },
+      // parentId: {
+      //   required: noArguments
+      // },
+      usersCreatorId: {
+        required: noArguments
+      },
+      status: {
+        required: noArguments
+      },
+    });
+
+    // console.log('input: ', input);
+    ValidateJoi.validate(menu, SCHEMA)
+      .then((data) => {
+        res.locals.body = data;
+        next()
+      })
+      .catch(error => next({ ...error, message: "Định dạng gửi đi không đúng" }
+      ));
+  },
+  authenUpdate: (req, res, next) => {
+    console.log("validate authenUpdate")
+
+    const { name, url, sitesId, parentId, status } = req.body;
+    const menu = { name, url, sitesId, parentId, status };
+
+    const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
+      name: {
+        max: 100,
+      },
+      url: {
+        max: 200,
+      },
+    });
+
+    ValidateJoi.validate(menu, SCHEMA)
+      .then((data) => {
+        res.locals.body = data;
+        next()
+      })
+      .catch(error => next({ ...error, message: "Định dạng gửi đi không đúng" }
+      ));
+  },
+  authenFilter: (req, res, next) => {
+    console.log("validate authenFilter")
+    const { filter, sort, range } = req.query;
+
+    res.locals.sort = sort ? JSON.parse(sort).map((e, i) => i === 0 ? sequelize.literal(`\`${e}\``) : e) : ["id", "asc"];
+    res.locals.range = range ? JSON.parse(range) : [0, 49];
+
+    if (filter) {
+      const { id, name, url, sitesId, parentId, status, usersCreatorId, FromDate, ToDate } = JSON.parse(filter);
+      const menu = { id, name, url, sitesId, parentId, status, usersCreatorId, FromDate, ToDate };
+
+      console.log(menu)
+      const SCHEMA = {
+        id: ValidateJoi.createSchemaProp({
+          any: noArguments,
+          label: viMessage['api.menus.id'],
+          // regex: regexPattern.listIds
+        }),
+        ...DEFAULT_SCHEMA,
+        sitesId: ValidateJoi.createSchemaProp({
+          string: noArguments,
+          label: viMessage.sitesId,
+          regex: regexPattern.listIds
+        }),
+        parentId: ValidateJoi.createSchemaProp({
+          string: noArguments,
+          label: viMessage['api.menus.parentId'],
+          regex: regexPattern.listIds
+        }),
+        usersCreatorId: ValidateJoi.createSchemaProp({
+          string: noArguments,
+          label: viMessage.usersCreatorId,
+          regex: regexPattern.listIds
+        }),
+        FromDate: ValidateJoi.createSchemaProp({
+          date: noArguments,
+          label: viMessage.FromDate,
+        }),
+        ToDate: ValidateJoi.createSchemaProp({
+          date: noArguments,
+          label: viMessage.ToDate,
+        }),
+      };
+
+      // console.log('input: ', input);
+      ValidateJoi.validate(menu, SCHEMA)
+        .then((data) => {
+          if (id) {
+            ValidateJoi.transStringToArray(data, 'id');
+          }
+          if (sitesId) {
+            ValidateJoi.transStringToArray(data, 'sitesId');
+          }
+          if (parentId) {
+            ValidateJoi.transStringToArray(data, 'parentId');
+          }
+          if (usersCreatorId) {
+            ValidateJoi.transStringToArray(data, 'usersCreatorId');
+          }
+
+          res.locals.filter = data;
+          console.log('locals.filter', res.locals.filter);
+          next();
+        })
+        .catch(error => {
+          next({ ...error, message: "Định dạng gửi đi không đúng" })
+        });
+    } else {
+      res.locals.filter = {};
+      next()
+    }
+  },
+  authenUpdateOrder: (req, res, next) => {
+    console.log("validate authenUpdateOrder")
+
+    const { orders } = req.body;
+    const menu = { orders };
+
+    const SCHEMA = {
+      orders: ValidateJoi.createSchemaProp({
+        array: noArguments,
+        label: viMessage['api.menus.orders'],
+      })
+    };
+
+    ValidateJoi.validate(menu, SCHEMA)
+      .then((data) => {
+        res.locals.body = data;
+        next()
+      })
+      .catch(error => next({ ...error, message: "Định dạng gửi đi không đúng" }
+      ));
+  },
+}

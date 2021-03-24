@@ -1,0 +1,375 @@
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T06:50:37.197Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/kindsofroom/ HTTP/1.1 200 188.405 ms","dataParam":{},"dataQuery":{},"level":"info","timestamp":"2021-03-19T06:51:17.667Z"}
+{"message":"127.0.0.1 - GET /api/c/kindsofroom/ HTTP/1.1 200 250 - 188.405 ms\n","level":"info","timestamp":"2021-03-19T06:51:17.670Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T06:51:44.149Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/kindsofroom/get/all HTTP/1.1 200 133.528 ms","data":[{"id":1,"name":"phòng học"},{"id":2,"name":"phòng thục hành"},{"id":3,"name":"phòng họp"},{"id":4,"name":"phòng dụng cụ"}],"level":"info","timestamp":"2021-03-19T06:52:03.409Z"}
+{"message":"127.0.0.1 - GET /api/c/kindsofroom/get/all HTTP/1.1 200 194 - 133.528 ms\n","level":"info","timestamp":"2021-03-19T06:52:03.417Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/kindsofroom/ HTTP/1.1 200 40.709 ms","dataParam":{},"dataQuery":{},"level":"info","timestamp":"2021-03-19T06:52:13.877Z"}
+{"message":"127.0.0.1 - GET /api/c/kindsofroom/ HTTP/1.1 200 250 - 40.709 ms\n","level":"info","timestamp":"2021-03-19T06:52:13.880Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T06:53:01.420Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T06:53:42.030Z"}
+{"message":"127.0.0.1 - PUT /api/c/kindsofroom/1 HTTP/1.1 200 83 - 90.295 ms\n","level":"info","timestamp":"2021-03-19T06:56:48.232Z"}
+{"message":"127.0.0.1 - PUT /api/c/kindsofroom/1 HTTP/1.1 200 83 - 8.726 ms\n","level":"info","timestamp":"2021-03-19T06:56:52.506Z"}
+{"message":"127.0.0.1 - PUT /api/c/kindsofroom/1 HTTP/1.1 200 83 - 8.270 ms\n","level":"info","timestamp":"2021-03-19T06:56:57.337Z"}
+{"message":"127.0.0.1 - PUT /api/c/kindsofroom/1 HTTP/1.1 200 83 - 15.736 ms\n","level":"info","timestamp":"2021-03-19T06:57:13.523Z"}
+{"message":"127.0.0.1 - PUT /api/c/kindsofroom/1 HTTP/1.1 200 83 - 18.501 ms\n","level":"info","timestamp":"2021-03-19T06:57:25.864Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T06:58:09.420Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T06:59:40.010Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/ HTTP/1.1 202 100 - 33.410 ms\n","level":"info","timestamp":"2021-03-19T07:00:38.716Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 200 82 - 86.918 ms\n","level":"info","timestamp":"2021-03-19T07:00:50.432Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 200 83 - 25.972 ms\n","level":"info","timestamp":"2021-03-19T07:01:06.570Z"}
+{"message":"  BaseApiError: Tên menu đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - kindsOfRoomService.js:111 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:111:34\n  \n","level":"error","timestamp":"2021-03-19T07:01:21.715Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 202 274 - 118.844 ms\n","level":"info","timestamp":"2021-03-19T07:01:21.728Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 200 83 - 17.658 ms\n","level":"info","timestamp":"2021-03-19T07:01:31.202Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 200 61 - 29.395 ms\n","level":"info","timestamp":"2021-03-19T07:01:55.653Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:02:31.873Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 200 61 - 55.482 ms\n","level":"info","timestamp":"2021-03-19T07:02:32.202Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:02:52.621Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T07:03:01.623Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 202 283 - 105.365 ms\n","level":"info","timestamp":"2021-03-19T07:03:01.640Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:04:19.121Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T07:04:25.126Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 202 283 - 134.085 ms\n","level":"info","timestamp":"2021-03-19T07:04:25.165Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:04:33.599Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T07:05:00.126Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 202 283 - 99.463 ms\n","level":"info","timestamp":"2021-03-19T07:05:00.142Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:05:09.710Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T07:05:15.668Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsofroom/create HTTP/1.1 202 301 - 110.138 ms\n","level":"info","timestamp":"2021-03-19T07:05:15.687Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:06:55.352Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:07:50.942Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:08:18.779Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:08:48.579Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:11:24.579Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:16:00.083Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:16:47.202Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:16:54.001Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:17:05.989Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:18:11.804Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:19:18.573Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:19:45.348Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:19:50.064Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:21:26.727Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:21:53.861Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:22:37.089Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:22:55.374Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:23:08.207Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:25:34.350Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:28:18.985Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:28:45.980Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:28:50.327Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:30:12.335Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:30:36.805Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:31:04.624Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:33:01.775Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:33:44.016Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:34:38.379Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:35:27.432Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:36:18.748Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:38:51.638Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:40:20.080Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:40:59.978Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:46:06.302Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:47:10.941Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:48:20.981Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:48:44.975Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:48:53.364Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:49:34.696Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:49:49.093Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:50:40.027Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:54:47.294Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:55:20.114Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:55:30.544Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:55:42.158Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:55:51.439Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:55:57.081Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:56:12.966Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:56:37.944Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:58:04.690Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:58:12.872Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T07:59:05.640Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:01:17.841Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:04:32.970Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:04:55.281Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:06:58.385Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:07:42.384Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:08:25.506Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:09:40.953Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:10:54.838Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:11:51.845Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:22:24.480Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:22:41.178Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:23:47.797Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:24:48.954Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:25:03.428Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:26:05.165Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:28:20.392Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:28:38.146Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:28:59.994Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:30:28.627Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:30:42.054Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:31:27.735Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:32:27.529Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:33:07.770Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:33:27.455Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:33:55.258Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:36:32.905Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:40:08.173Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:41:39.113Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:43:04.372Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:43:45.679Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:45:58.183Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:46:21.994Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:48:34.868Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:51:44.159Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:51:52.500Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:53:03.373Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:53:28.328Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 74 - 84.293 ms\n","level":"info","timestamp":"2021-03-19T08:53:49.836Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 75 - 27.674 ms\n","level":"info","timestamp":"2021-03-19T08:54:07.389Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 80 - 19.614 ms\n","level":"info","timestamp":"2021-03-19T08:54:15.318Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 82 - 25.389 ms\n","level":"info","timestamp":"2021-03-19T08:54:23.521Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 75 - 16.040 ms\n","level":"info","timestamp":"2021-03-19T08:54:31.270Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 82 - 17.549 ms\n","level":"info","timestamp":"2021-03-19T08:54:37.517Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 76 - 24.976 ms\n","level":"info","timestamp":"2021-03-19T08:55:06.975Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:57:49.065Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T08:58:43.818Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:01:47.908Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:02:23.555Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:02:50.382Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:03:12.195Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:19:02.817Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:19:25.802Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:20:10.245Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:21:23.511Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/manager HTTP/1.1 200 84.731 ms","dataParam":{},"dataQuery":{},"level":"info","timestamp":"2021-03-19T09:21:45.572Z"}
+{"message":"127.0.0.1 - GET /api/c/manager HTTP/1.1 200 114 - 84.731 ms\n","level":"info","timestamp":"2021-03-19T09:21:45.575Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:27:39.222Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:28:48.015Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 87.685 ms\n","level":"info","timestamp":"2021-03-19T09:28:48.030Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:29:09.322Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 60.094 ms\n","level":"info","timestamp":"2021-03-19T09:29:09.329Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:29:21.908Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 50.013 ms\n","level":"info","timestamp":"2021-03-19T09:29:21.914Z"}
+{"message":"Unexpected token } in JSON at position 30","level":"error","timestamp":"2021-03-19T09:29:31.217Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 100 - 12.337 ms\n","level":"info","timestamp":"2021-03-19T09:29:31.224Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:29:36.916Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 64.586 ms\n","level":"info","timestamp":"2021-03-19T09:29:36.925Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:29:47.646Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 40.242 ms\n","level":"info","timestamp":"2021-03-19T09:29:47.655Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:30:40.939Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 45.624 ms\n","level":"info","timestamp":"2021-03-19T09:30:40.950Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:30:51.106Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 100 - 2.740 ms\n","level":"info","timestamp":"2021-03-19T09:30:51.109Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:31:30.695Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:31:35.566Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 100 - 54.223 ms\n","level":"info","timestamp":"2021-03-19T09:31:35.581Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:31:51.006Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:32:01.120Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 100 - 42.920 ms\n","level":"info","timestamp":"2021-03-19T09:32:01.131Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:32:48.696Z"}
+{"message":"127.0.0.1 - GET /api/c/manager/ HTTP/1.1 202 100 - 10.287 ms\n","level":"info","timestamp":"2021-03-19T09:32:48.701Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:33:22.563Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:33:26.711Z"}
+{"message":"127.0.0.1 - GET /api/c/manager/ HTTP/1.1 202 100 - 31.792 ms\n","level":"info","timestamp":"2021-03-19T09:33:26.717Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:33:47.649Z"}
+{"message":"127.0.0.1 - GET /api/c/item/ HTTP/1.1 202 100 - 10.068 ms\n","level":"info","timestamp":"2021-03-19T09:33:47.655Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:33:49.517Z"}
+{"message":"127.0.0.1 - GET /api/c/item/ HTTP/1.1 202 100 - 2.363 ms\n","level":"info","timestamp":"2021-03-19T09:33:49.520Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:33:50.799Z"}
+{"message":"127.0.0.1 - GET /api/c/item/ HTTP/1.1 202 100 - 1.393 ms\n","level":"info","timestamp":"2021-03-19T09:33:50.802Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:33:51.653Z"}
+{"message":"127.0.0.1 - GET /api/c/item/ HTTP/1.1 202 100 - 1.591 ms\n","level":"info","timestamp":"2021-03-19T09:33:51.655Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:33:52.139Z"}
+{"message":"127.0.0.1 - GET /api/c/item/ HTTP/1.1 202 100 - 1.788 ms\n","level":"info","timestamp":"2021-03-19T09:33:52.141Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:34:36.023Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:34:41.594Z"}
+{"message":"127.0.0.1 - GET /api/c/item/ HTTP/1.1 202 100 - 38.479 ms\n","level":"info","timestamp":"2021-03-19T09:34:41.601Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:34:43.281Z"}
+{"message":"127.0.0.1 - GET /api/c/item/ HTTP/1.1 202 100 - 1.427 ms\n","level":"info","timestamp":"2021-03-19T09:34:43.283Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:34:53.632Z"}
+{"message":"127.0.0.1 - GET /api/c/kindsOfRoom/ HTTP/1.1 202 100 - 10.113 ms\n","level":"info","timestamp":"2021-03-19T09:34:53.642Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:35:13.754Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:35:22.390Z"}
+{"message":"127.0.0.1 - GET /api/c/kindsOfRoom/ HTTP/1.1 202 100 - 53.593 ms\n","level":"info","timestamp":"2021-03-19T09:35:22.414Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 200 56 - 1.807 ms\n","level":"info","timestamp":"2021-03-19T09:35:30.478Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:35:36.592Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 202 100 - 8.011 ms\n","level":"info","timestamp":"2021-03-19T09:35:36.600Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:35:40.861Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 202 100 - 2.007 ms\n","level":"info","timestamp":"2021-03-19T09:35:40.862Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:35:42.306Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 202 100 - 1.406 ms\n","level":"info","timestamp":"2021-03-19T09:35:42.309Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:35:42.885Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 202 100 - 1.901 ms\n","level":"info","timestamp":"2021-03-19T09:35:42.887Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 304 - - 0.805 ms\n","level":"info","timestamp":"2021-03-19T09:35:48.704Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 200 4 - 1.839 ms\n","level":"info","timestamp":"2021-03-19T09:35:51.090Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:36:00.759Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 202 100 - 10.538 ms\n","level":"info","timestamp":"2021-03-19T09:36:00.764Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 304 - - 0.748 ms\n","level":"info","timestamp":"2021-03-19T09:36:12.598Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 304 - - 0.465 ms\n","level":"info","timestamp":"2021-03-19T09:36:15.612Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 304 - - 0.763 ms\n","level":"info","timestamp":"2021-03-19T09:36:38.621Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 304 - - 0.342 ms\n","level":"info","timestamp":"2021-03-19T09:36:41.664Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 304 - - 0.494 ms\n","level":"info","timestamp":"2021-03-19T09:36:45.079Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:36:50.597Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 202 100 - 8.961 ms\n","level":"info","timestamp":"2021-03-19T09:36:50.602Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 304 - - 0.239 ms\n","level":"info","timestamp":"2021-03-19T09:36:57.419Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 304 - - 0.387 ms\n","level":"info","timestamp":"2021-03-19T09:37:11.778Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:37:16.448Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 202 100 - 2.394 ms\n","level":"info","timestamp":"2021-03-19T09:37:16.450Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:37:43.339Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 304 - - 5.699 ms\n","level":"info","timestamp":"2021-03-19T09:37:46.263Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:38:17.781Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 202 100 - 43.202 ms\n","level":"info","timestamp":"2021-03-19T09:38:17.792Z"}
+{"message":"Unexpected token } in JSON at position 59","level":"error","timestamp":"2021-03-19T09:38:19.590Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 202 100 - 2.540 ms\n","level":"info","timestamp":"2021-03-19T09:38:19.592Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 200 4 - 1.467 ms\n","level":"info","timestamp":"2021-03-19T09:38:56.296Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 200 4 - 2.565 ms\n","level":"info","timestamp":"2021-03-19T09:39:13.861Z"}
+{"message":"127.0.0.1 - GET /c/api/item HTTP/1.1 202 100 - 1.391 ms\n","level":"info","timestamp":"2021-03-19T09:39:25.840Z"}
+{"message":"127.0.0.1 - GET /c/api/item HTTP/1.1 202 100 - 1.498 ms\n","level":"info","timestamp":"2021-03-19T09:39:41.712Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:39:51.878Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/item HTTP/1.1 200 85.568 ms","dataParam":{},"dataQuery":{},"level":"info","timestamp":"2021-03-19T09:40:06.971Z"}
+{"message":"127.0.0.1 - GET /api/c/item HTTP/1.1 200 300 - 85.568 ms\n","level":"info","timestamp":"2021-03-19T09:40:06.973Z"}
+{"message":"127.0.0.1 - GET /api/c/manager HTTP/1.1 202 100 - 2.824 ms\n","level":"info","timestamp":"2021-03-19T09:40:14.690Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:40:55.167Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/manager HTTP/1.1 200 86.753 ms","dataParam":{},"dataQuery":{},"level":"info","timestamp":"2021-03-19T09:41:00.946Z"}
+{"message":"127.0.0.1 - GET /api/c/manager HTTP/1.1 200 234 - 86.753 ms\n","level":"info","timestamp":"2021-03-19T09:41:00.950Z"}
+{"message":"Unexpected string in JSON at position 33","level":"error","timestamp":"2021-03-19T09:42:43.639Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 100 - 43.937 ms\n","level":"info","timestamp":"2021-03-19T09:42:43.643Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:43:17.164Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 92.603 ms\n","level":"info","timestamp":"2021-03-19T09:43:17.174Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:44:13.044Z"}
+{"message":"  ReferenceError: username is not defined\n  \n  - managerValidate.js:35 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:35:33\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-19T09:44:16.566Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 128 - 92.086 ms\n","level":"info","timestamp":"2021-03-19T09:44:16.581Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:45:00.980Z"}
+{"message":"  TypeError: Cannot read property 'max' of undefined\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:75\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:37 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:37:36\n  \n","level":"error","timestamp":"2021-03-19T09:45:18.794Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 144 - 157.466 ms\n","level":"info","timestamp":"2021-03-19T09:45:18.811Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:45:48.805Z"}
+{"message":"  TypeError: Cannot read property 'max' of undefined\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:75\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:38 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:38:36\n  \n","level":"error","timestamp":"2021-03-19T09:45:49.070Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 144 - 170.959 ms\n","level":"info","timestamp":"2021-03-19T09:45:49.084Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:50:12.022Z"}
+{"message":"  TypeError: Cannot read property 'max' of undefined\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:75\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:38 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:38:36\n  \n","level":"error","timestamp":"2021-03-19T09:50:18.751Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 144 - 123.627 ms\n","level":"info","timestamp":"2021-03-19T09:50:18.766Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:51:10.496Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:51:33.627Z"}
+{"message":"  TypeError: schemaProp[opsK] is not a function\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:65\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:42 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:42:36\n  \n","level":"error","timestamp":"2021-03-19T09:51:42.922Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 139 - 143.959 ms\n","level":"info","timestamp":"2021-03-19T09:51:42.934Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:53:06.663Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:53:40.054Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:53:55.902Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-19T09:54:04.690Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:54:45.115Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:55:13.368Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 200 172 - 77.435 ms\n","level":"info","timestamp":"2021-03-19T09:55:17.417Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T09:55:46.639Z"}
+{"message":"  TypeError: schemaProp[opsK] is not a function\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:65\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:42 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:42:36\n  \n","level":"error","timestamp":"2021-03-19T09:55:58.120Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 139 - 141.471 ms\n","level":"info","timestamp":"2021-03-19T09:55:58.130Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/manager HTTP/1.1 200 78.559 ms","dataParam":{},"dataQuery":{},"level":"info","timestamp":"2021-03-19T09:56:34.248Z"}
+{"message":"127.0.0.1 - GET /api/c/manager HTTP/1.1 200 234 - 78.559 ms\n","level":"info","timestamp":"2021-03-19T09:56:34.250Z"}
+{"message":"  TypeError: schemaProp[opsK] is not a function\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:65\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:42 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:42:36\n  \n","level":"error","timestamp":"2021-03-19T09:56:41.597Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 139 - 81.057 ms\n","level":"info","timestamp":"2021-03-19T09:56:41.602Z"}
+{"message":"Unexpected token } in JSON at position 32","level":"error","timestamp":"2021-03-19T09:56:54.417Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 100 - 8.298 ms\n","level":"info","timestamp":"2021-03-19T09:56:54.421Z"}
+{"message":"Unexpected token } in JSON at position 29","level":"error","timestamp":"2021-03-19T09:57:23.642Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 100 - 3.239 ms\n","level":"info","timestamp":"2021-03-19T09:57:23.646Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 200 85 - 16.855 ms\n","level":"info","timestamp":"2021-03-19T09:57:35.758Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T09:58:58.303Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 301 - 51.489 ms\n","level":"info","timestamp":"2021-03-19T09:58:58.316Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T09:59:09.580Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 301 - 23.758 ms\n","level":"info","timestamp":"2021-03-19T09:59:09.585Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T09:59:21.150Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 344 - 8.781 ms\n","level":"info","timestamp":"2021-03-19T09:59:21.155Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T09:59:23.738Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 344 - 10.744 ms\n","level":"info","timestamp":"2021-03-19T09:59:23.743Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 200 72 - 8.820 ms\n","level":"info","timestamp":"2021-03-19T09:59:26.875Z"}
+{"message":"127.0.0.1 - POST /api/c/manager HTTP/1.1 202 100 - 0.940 ms\n","level":"info","timestamp":"2021-03-19T10:00:20.429Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/manager HTTP/1.1 200 32.893 ms","dataParam":{},"dataQuery":{},"level":"info","timestamp":"2021-03-19T10:00:27.039Z"}
+{"message":"127.0.0.1 - GET /api/c/manager HTTP/1.1 200 234 - 32.893 ms\n","level":"info","timestamp":"2021-03-19T10:00:27.041Z"}
+{"message":"Logs  127.0.0.1 GET /api/c/manager/get/all HTTP/1.1 200 15.730 ms","data":[{"id":1,"name":"nguyễn ngọc","username":"ngocnk99","password":"123abc","sex":true,"yearOfBirth":1999,"isAdmin":true}],"level":"info","timestamp":"2021-03-19T10:00:36.312Z"}
+{"message":"127.0.0.1 - GET /api/c/manager/get/all HTTP/1.1 200 178 - 15.730 ms\n","level":"info","timestamp":"2021-03-19T10:00:36.331Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T10:00:49.162Z"}
+{"message":"127.0.0.1 - PUT /api/c/manager/1 HTTP/1.1 202 509 - 32.800 ms\n","level":"info","timestamp":"2021-03-19T10:00:49.178Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:01:53.601Z"}
+{"message":"  TypeError: schemaProp[opsK] is not a function\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:65\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:81 authenUpdate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:81:36\n  \n","level":"error","timestamp":"2021-03-19T10:01:58.068Z"}
+{"message":"127.0.0.1 - PUT /api/c/manager/1 HTTP/1.1 202 139 - 134.898 ms\n","level":"info","timestamp":"2021-03-19T10:01:58.084Z"}
+{"message":"  TypeError: schemaProp[opsK] is not a function\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:65\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:81 authenUpdate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:81:36\n  \n","level":"error","timestamp":"2021-03-19T10:04:26.401Z"}
+{"message":"127.0.0.1 - PUT /api/c/manager/1 HTTP/1.1 202 139 - 93.564 ms\n","level":"info","timestamp":"2021-03-19T10:04:26.405Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:06:25.944Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 202 100 - 37.117 ms\n","level":"info","timestamp":"2021-03-19T10:06:43.160Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 200 77 - 64.184 ms\n","level":"info","timestamp":"2021-03-19T10:06:51.146Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:07:29.129Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:08:35.434Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:08:40.908Z"}
+{"message":"  BaseApiError: Tên loại phòng đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - kindsOfRoomService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:08:57.423Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 301 - 150.130 ms\n","level":"info","timestamp":"2021-03-19T10:08:57.443Z"}
+{"message":"  TypeError: schemaProp[opsK] is not a function\n  \n  - validateJoi.js:26 reduce\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:26:65\n  \n  - Array.reduce\n  \n  - validateJoi.js:23 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:23:38\n  \n  - lodash.js:4967 \n    [project-example]/[lodash]/lodash.js:4967:15\n  \n  - lodash.js:13018 Function.forIn\n    [project-example]/[lodash]/lodash.js:13018:11\n  \n  - validateJoi.js:22 Function.assignSchema\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/utils//validateJoi.js:22:7\n  \n  - managerValidate.js:42 authenCreate\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/validates//managerValidate.js:42:36\n  \n","level":"error","timestamp":"2021-03-19T10:09:11.607Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 139 - 124.253 ms\n","level":"info","timestamp":"2021-03-19T10:09:11.619Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:10:18.894Z"}
+{"message":"  BaseApiError: Tạo hoặc sửa xảy ra lỗi\n  \n  - managerService.js:102 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//managerService.js:102:24\n  \n  - util.js:16 tryCatcher\n    [project-example]/[bluebird]/js/release/util.js:16:23\n  \n  - promise.js:547 Promise._settlePromiseFromHandler\n    [project-example]/[bluebird]/js/release/promise.js:547:31\n  \n  - promise.js:604 Promise._settlePromise\n    [project-example]/[bluebird]/js/release/promise.js:604:18\n  \n  - promise.js:649 Promise._settlePromise0\n    [project-example]/[bluebird]/js/release/promise.js:649:10\n  \n  - promise.js:725 Promise._settlePromises\n    [project-example]/[bluebird]/js/release/promise.js:725:18\n  \n  - async.js:93 _drainQueueStep\n    [project-example]/[bluebird]/js/release/async.js:93:12\n  \n  - async.js:86 _drainQueue\n    [project-example]/[bluebird]/js/release/async.js:86:9\n  \n  - async.js:102 Async._drainQueues\n    [project-example]/[bluebird]/js/release/async.js:102:5\n  \n  - async.js:15 Immediate.Async.drainQueues [as _onImmediate]\n    [project-example]/[bluebird]/js/release/async.js:15:14\n  \n  - timers.js:456 processImmediate\n    internal/timers.js:456:21\n  \n","level":"error","timestamp":"2021-03-19T10:10:22.696Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 - - 124.046 ms\n","level":"info","timestamp":"2021-03-19T10:10:22.722Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:11:08.554Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T10:11:11.400Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 337 - 115.680 ms\n","level":"info","timestamp":"2021-03-19T10:11:11.411Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:11:43.157Z"}
+{"message":"  BaseApiError: Tạo hoặc sửa xảy ra lỗi\n  \n  - managerService.js:102 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//managerService.js:102:24\n  \n  - util.js:16 tryCatcher\n    [project-example]/[bluebird]/js/release/util.js:16:23\n  \n  - promise.js:547 Promise._settlePromiseFromHandler\n    [project-example]/[bluebird]/js/release/promise.js:547:31\n  \n  - promise.js:604 Promise._settlePromise\n    [project-example]/[bluebird]/js/release/promise.js:604:18\n  \n  - promise.js:649 Promise._settlePromise0\n    [project-example]/[bluebird]/js/release/promise.js:649:10\n  \n  - promise.js:725 Promise._settlePromises\n    [project-example]/[bluebird]/js/release/promise.js:725:18\n  \n  - async.js:93 _drainQueueStep\n    [project-example]/[bluebird]/js/release/async.js:93:12\n  \n  - async.js:86 _drainQueue\n    [project-example]/[bluebird]/js/release/async.js:86:9\n  \n  - async.js:102 Async._drainQueues\n    [project-example]/[bluebird]/js/release/async.js:102:5\n  \n  - async.js:15 Immediate.Async.drainQueues [as _onImmediate]\n    [project-example]/[bluebird]/js/release/async.js:15:14\n  \n  - timers.js:456 processImmediate\n    internal/timers.js:456:21\n  \n","level":"error","timestamp":"2021-03-19T10:12:10.026Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 - - 231.890 ms\n","level":"info","timestamp":"2021-03-19T10:12:10.057Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:12:57.227Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T10:13:19.571Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 375 - 144.317 ms\n","level":"info","timestamp":"2021-03-19T10:13:19.591Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:13:51.470Z"}
+{"message":"  BaseApiError: Tạo hoặc sửa xảy ra lỗi\n  \n  - managerService.js:102 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//managerService.js:102:24\n  \n  - util.js:16 tryCatcher\n    [project-example]/[bluebird]/js/release/util.js:16:23\n  \n  - promise.js:547 Promise._settlePromiseFromHandler\n    [project-example]/[bluebird]/js/release/promise.js:547:31\n  \n  - promise.js:604 Promise._settlePromise\n    [project-example]/[bluebird]/js/release/promise.js:604:18\n  \n  - promise.js:649 Promise._settlePromise0\n    [project-example]/[bluebird]/js/release/promise.js:649:10\n  \n  - promise.js:725 Promise._settlePromises\n    [project-example]/[bluebird]/js/release/promise.js:725:18\n  \n  - async.js:93 _drainQueueStep\n    [project-example]/[bluebird]/js/release/async.js:93:12\n  \n  - async.js:86 _drainQueue\n    [project-example]/[bluebird]/js/release/async.js:86:9\n  \n  - async.js:102 Async._drainQueues\n    [project-example]/[bluebird]/js/release/async.js:102:5\n  \n  - async.js:15 Immediate.Async.drainQueues [as _onImmediate]\n    [project-example]/[bluebird]/js/release/async.js:15:14\n  \n  - timers.js:456 processImmediate\n    internal/timers.js:456:21\n  \n","level":"error","timestamp":"2021-03-19T10:13:51.912Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 - - 186.227 ms\n","level":"info","timestamp":"2021-03-19T10:13:51.939Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:14:25.118Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T10:14:28.673Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 349 - 109.159 ms\n","level":"info","timestamp":"2021-03-19T10:14:28.686Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T10:14:45.441Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 361 - 43.569 ms\n","level":"info","timestamp":"2021-03-19T10:14:45.454Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T10:14:54.889Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 361 - 37.724 ms\n","level":"info","timestamp":"2021-03-19T10:14:54.901Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 200 152 - 90.276 ms\n","level":"info","timestamp":"2021-03-19T10:15:02.651Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:15:26.570Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - managerService.js:94 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//managerService.js:94:34\n  \n","level":"error","timestamp":"2021-03-19T10:15:36.436Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 274 - 137.624 ms\n","level":"info","timestamp":"2021-03-19T10:15:36.449Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 200 164 - 35.344 ms\n","level":"info","timestamp":"2021-03-19T10:15:48.642Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - managerService.js:94 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//managerService.js:94:34\n  \n","level":"error","timestamp":"2021-03-19T10:16:17.914Z"}
+{"message":"127.0.0.1 - POST /api/c/manager/create HTTP/1.1 202 274 - 59.746 ms\n","level":"info","timestamp":"2021-03-19T10:16:17.920Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:18:07.663Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 78.112 ms\n","level":"info","timestamp":"2021-03-19T10:18:07.676Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 200 75 - 18.708 ms\n","level":"info","timestamp":"2021-03-19T10:18:17.680Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 200 83 - 20.572 ms\n","level":"info","timestamp":"2021-03-19T10:18:53.473Z"}
+{"message":"  BaseApiError: Tên loại phòng đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - kindsOfRoomService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:18:56.447Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 301 - 43.771 ms\n","level":"info","timestamp":"2021-03-19T10:18:56.458Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:19:22.210Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:19:28.506Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:19:41.565Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 139.711 ms\n","level":"info","timestamp":"2021-03-19T10:19:41.582Z"}
+{"message":"  BaseApiError: Tên loại phòng đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - kindsOfRoomService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:20:03.587Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 301 - 89.727 ms\n","level":"info","timestamp":"2021-03-19T10:20:03.596Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:20:59.484Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 86.526 ms\n","level":"info","timestamp":"2021-03-19T10:20:59.497Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:23:04.405Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:23:09.749Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 137.861 ms\n","level":"info","timestamp":"2021-03-19T10:23:09.767Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:23:23.436Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 70.891 ms\n","level":"info","timestamp":"2021-03-19T10:23:23.444Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:23:30.724Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:23:34.972Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 180.015 ms\n","level":"info","timestamp":"2021-03-19T10:23:34.996Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 200 75 - 44.431 ms\n","level":"info","timestamp":"2021-03-19T10:23:42.686Z"}
+{"message":"  BaseApiError: Tên loại phòng đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - kindsOfRoomService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:23:45.174Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 301 - 51.730 ms\n","level":"info","timestamp":"2021-03-19T10:23:45.180Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:24:55.880Z"}
+{"message":"  BaseApiError: Tên loại phòng đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - kindsOfRoomService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:24:59.726Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/create HTTP/1.1 202 301 - 147.042 ms\n","level":"info","timestamp":"2021-03-19T10:24:59.741Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:25:07.565Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 83.746 ms\n","level":"info","timestamp":"2021-03-19T10:25:07.571Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:25:30.802Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:25:42.274Z"}
+{"message":"  BaseApiError: undefined đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:25:45.424Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 274 - 121.915 ms\n","level":"info","timestamp":"2021-03-19T10:25:45.440Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:25:55.586Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:27:26.237Z"}
+{"message":"  BaseApiError: Tên đồ vật đã tồn tại!\n  \n  - preCheckHelpers.js:219 Function.createErrorCheck\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:219:14\n  \n  - preCheckHelpers.js:114 forEach\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:114:44\n  \n  - Array.forEach\n  \n  - preCheckHelpers.js:113 Function.check\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//preCheckHelpers.js:113:13\n  \n  - itemService.js:109 Object.create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//itemService.js:109:34\n  \n","level":"error","timestamp":"2021-03-19T10:27:30.357Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 295 - 163.505 ms\n","level":"info","timestamp":"2021-03-19T10:27:30.421Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-19T10:27:53.321Z"}
+{"message":"  Error: Định dạng gửi đi không đúng\n","level":"error","timestamp":"2021-03-19T10:32:26.765Z"}
+{"message":"127.0.0.1 - POST /api/c/item/create HTTP/1.1 202 340 - 122.486 ms\n","level":"info","timestamp":"2021-03-19T10:32:26.782Z"}

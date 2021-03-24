@@ -1,0 +1,192 @@
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T03:44:03.001Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 200 56 - 4.731 ms\n","level":"info","timestamp":"2021-03-16T03:45:26.027Z"}
+{"message":"127.0.0.1 - GET /api/c HTTP/1.1 202 100 - 1.366 ms\n","level":"info","timestamp":"2021-03-16T03:47:07.670Z"}
+{"message":"  Error: Bạn chưa đăng nhập\n  \n  - index.js:118 \n    C:/Users/Admin/Desktop/NBM/project/project-example/src//index.js:118:17\n  \n  - index.js:78 middleware\n    [project-example]/[express-jwt]/lib/index.js:78:16\n  \n  - index.js:47 \n    [project-example]/[express-unless]/index.js:47:5\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-16T03:47:15.246Z"}
+{"message":"127.0.0.1 - GET /api/c/* HTTP/1.1 202 130 - 64.557 ms\n","level":"info","timestamp":"2021-03-16T03:47:15.256Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:16:47.739Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:18:38.608Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:20:10.685Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:20:41.072Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:22:23.923Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:23:08.530Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:24:32.558Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:24:58.546Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:25:34.541Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:26:18.303Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:26:32.529Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:26:52.239Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:26:57.552Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:27:11.422Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:33:00.559Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:33:34.477Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:41:38.129Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:42:32.157Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:42:56.867Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:45:09.261Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:46:36.827Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:47:22.965Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T04:47:42.167Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:38:27.776Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:43:03.712Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:43:14.008Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:43:34.465Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:43:55.822Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:48:34.216Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:49:16.699Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:50:32.351Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:52:40.419Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:53:27.900Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:53:45.992Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:53:57.170Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:55:04.704Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:55:24.517Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:56:31.492Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T06:57:07.404Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:34:12.319Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:35:39.312Z"}
+{"message":"127.0.0.1 - GET /api/ HTTP/1.1 200 56 - 3.047 ms\n","level":"info","timestamp":"2021-03-16T07:35:55.616Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:36:20.831Z"}
+{"message":"127.0.0.1 - GET /api/ HTTP/1.1 200 56 - 2.780 ms\n","level":"info","timestamp":"2021-03-16T07:36:20.947Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 200 4 - 0.973 ms\n","level":"info","timestamp":"2021-03-16T07:36:25.708Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:36:33.413Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:36:57.735Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:38:31.469Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:43:36.563Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:50:43.376Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:53:08.366Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T07:54:16.735Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:09:52.288Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:11:32.333Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:12:20.177Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:15:05.091Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:15:42.811Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:17:14.714Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:17:22.418Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:18:19.700Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:22:08.604Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:23:06.739Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:23:19.857Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:23:26.785Z"}
+{"message":"127.0.0.1 - GET /c/sites HTTP/1.1 202 100 - 2.572 ms\n","level":"info","timestamp":"2021-03-16T08:24:06.540Z"}
+{"message":"127.0.0.1 - GET /c/kindsOfRoom HTTP/1.1 202 100 - 0.228 ms\n","level":"info","timestamp":"2021-03-16T08:24:28.788Z"}
+{"message":"127.0.0.1 - POST /c/kindsOfRoom HTTP/1.1 202 100 - 0.276 ms\n","level":"info","timestamp":"2021-03-16T08:26:36.515Z"}
+{"message":"127.0.0.1 - POST /c/kindsOfRoom HTTP/1.1 202 100 - 0.221 ms\n","level":"info","timestamp":"2021-03-16T08:26:38.271Z"}
+{"message":"127.0.0.1 - POST /c/kindsOfRoom HTTP/1.1 202 100 - 1.026 ms\n","level":"info","timestamp":"2021-03-16T08:26:38.903Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:27:38.117Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:27:45.242Z"}
+{"message":"127.0.0.1 - POST /c/kindsOfRoom HTTP/1.1 202 100 - 2.362 ms\n","level":"info","timestamp":"2021-03-16T08:27:45.438Z"}
+{"message":"127.0.0.1 - POST /c/kindsOfRoom HTTP/1.1 202 100 - 0.247 ms\n","level":"info","timestamp":"2021-03-16T08:27:47.968Z"}
+{"message":"127.0.0.1 - POST /c/kindsOfRoom HTTP/1.1 202 100 - 0.514 ms\n","level":"info","timestamp":"2021-03-16T08:28:00.750Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:28:38.887Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:29:18.137Z"}
+{"message":"127.0.0.1 - POST /c/kindsOfRoom HTTP/1.1 202 100 - 2.209 ms\n","level":"info","timestamp":"2021-03-16T08:29:21.753Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:31:03.110Z"}
+{"message":"127.0.0.1 - POST /c/ HTTP/1.1 202 100 - 2.279 ms\n","level":"info","timestamp":"2021-03-16T08:31:17.125Z"}
+{"message":"- - GET / HTTP/1.1 200 2 - 1.432 ms\n","level":"info","timestamp":"2021-03-16T08:31:23.861Z"}
+{"message":"127.0.0.1 - GET / HTTP/1.1 200 2 - 0.639 ms\n","level":"info","timestamp":"2021-03-16T08:31:32.986Z"}
+{"message":"127.0.0.1 - GET /api HTTP/1.1 200 56 - 0.429 ms\n","level":"info","timestamp":"2021-03-16T08:31:43.304Z"}
+{"message":"  Error: BaseApiError => SiteServiceError: Lỗi lấy danh sách\n  \n  - errorHelpers.js:62 Function.errorThrow\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//errorHelpers.js:62:11\n  \n  - kindsOfRoomService.js:56 Object.get_list\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:56:26\n  \n  - kindsOfRoomController.js:21 get_list\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/controllers//kindsOfRoomController.js:21:25\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-16T08:31:48.844Z"}
+{"message":"127.0.0.1 - GET /api/c HTTP/1.1 202 4033 - 96.995 ms\n","level":"info","timestamp":"2021-03-16T08:31:48.875Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 200 2 - 0.989 ms\n","level":"info","timestamp":"2021-03-16T08:31:58.407Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 200 2 - 0.659 ms\n","level":"info","timestamp":"2021-03-16T08:32:36.299Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 200 2 - 0.767 ms\n","level":"info","timestamp":"2021-03-16T08:32:44.705Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:32:57.814Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:33:01.054Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:33:22.360Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:33:23.493Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:33:40.317Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:33:40.670Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:33:55.046Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:33:58.671Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:34:28.318Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:34:36.465Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:34:38.531Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:35:19.413Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:36:06.406Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:36:08.834Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:36:31.975Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:36:34.763Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:37:38.286Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:38:00.141Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:38:06.301Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:38:25.873Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:38:28.355Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:38:54.777Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:38:58.966Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:39:35.705Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:40:22.736Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:40:25.729Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:40:58.349Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:41:02.614Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:41:13.748Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:44:52.761Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:45:42.630Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:45:48.371Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:45:55.013Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/c HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:45:58.161Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom/c HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:45:59.147Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 202 100 - 0.266 ms\n","level":"info","timestamp":"2021-03-16T08:46:05.645Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 202 100 - 0.376 ms\n","level":"info","timestamp":"2021-03-16T08:46:06.420Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 202 100 - 0.264 ms\n","level":"info","timestamp":"2021-03-16T08:46:07.438Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:46:23.005Z"}
+{"message":"127.0.0.1 - POST /api/c HTTP/1.1 202 100 - 3.155 ms\n","level":"info","timestamp":"2021-03-16T08:46:25.658Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:47:22.485Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:48:32.975Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:48:35.786Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - - ms\n","level":"info","timestamp":"2021-03-16T08:54:15.702Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:55:03.217Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 3.511 ms\n","level":"info","timestamp":"2021-03-16T08:55:05.252Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 0.617 ms\n","level":"info","timestamp":"2021-03-16T08:55:11.196Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 0.979 ms\n","level":"info","timestamp":"2021-03-16T08:56:32.939Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:57:39.894Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - 4.586 ms\n","level":"info","timestamp":"2021-03-16T08:57:40.886Z"}
+{"message":"  Error: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: test2\n  \n  - index.js:44 ServerResponse.writeHead\n    [project-example]/[on-headers]/index.js:44:26\n  \n  - index.js:44 ServerResponse.writeHead\n    [project-example]/[on-headers]/index.js:44:26\n  \n  - index.js:103 ServerResponse.end\n    [project-example]/[compression]/index.js:103:14\n  \n  - kindsOfRoomController.js:80 create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/controllers//kindsOfRoomController.js:80:17\n  \n","level":"error","timestamp":"2021-03-16T08:57:40.942Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 - - - 0.772 ms\n","level":"info","timestamp":"2021-03-16T08:57:45.988Z"}
+{"message":"  Error: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: test2\n  \n  - index.js:44 ServerResponse.writeHead\n    [project-example]/[on-headers]/index.js:44:26\n  \n  - index.js:44 ServerResponse.writeHead\n    [project-example]/[on-headers]/index.js:44:26\n  \n  - index.js:103 ServerResponse.end\n    [project-example]/[compression]/index.js:103:14\n  \n  - kindsOfRoomController.js:80 create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/controllers//kindsOfRoomController.js:80:17\n  \n","level":"error","timestamp":"2021-03-16T08:57:46.021Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:58:48.396Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T08:58:55.638Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 2.850 ms\n","level":"info","timestamp":"2021-03-16T08:58:56.684Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T09:00:11.756Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 155.174 ms\n","level":"info","timestamp":"2021-03-16T09:00:14.942Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T09:03:21.756Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 3.952 ms\n","level":"info","timestamp":"2021-03-16T09:03:23.658Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T09:04:37.766Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 3.675 ms\n","level":"info","timestamp":"2021-03-16T09:04:37.872Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T09:05:15.921Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 4.150 ms\n","level":"info","timestamp":"2021-03-16T09:05:17.980Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T09:34:06.950Z"}
+{"message":"127.0.0.1 - GET /c/kindsOfRoom HTTP/1.1 202 100 - 23.466 ms\n","level":"info","timestamp":"2021-03-16T09:34:32.311Z"}
+{"message":"  Error: BaseApiError => SiteServiceError: Lỗi lấy danh sách\n  \n  - errorHelpers.js:62 Function.errorThrow\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/helpers//errorHelpers.js:62:11\n  \n  - kindsOfRoomService.js:56 Object.get_list\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/services//kindsOfRoomService.js:56:26\n  \n  - kindsOfRoomController.js:21 get_list\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/controllers//kindsOfRoomController.js:21:25\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-16T09:34:58.519Z"}
+{"message":"127.0.0.1 - GET /api/c/kindsOfRoom HTTP/1.1 202 - - 112.954 ms\n","level":"info","timestamp":"2021-03-16T09:34:58.549Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T09:35:41.161Z"}
+{"message":"Server started at http://0.0.0.0:8888/api","level":"info","timestamp":"2021-03-16T09:36:29.658Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 16 - 6.863 ms\n","level":"info","timestamp":"2021-03-16T09:36:29.823Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:38:43.401Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:44:01.581Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:50:34.280Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:51:03.878Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:51:15.175Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:52:16.193Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:54:49.686Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T09:55:19.774Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:01:19.890Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:03:25.691Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:03:54.745Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:04:02.817Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:05:21.842Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:06:20.604Z"}
+{"name":"SequelizeConnectionError","parent":{"code":"ER_NOT_SUPPORTED_AUTH_MODE","errno":1251,"sqlState":"08004","sqlMessage":"Client does not support authentication protocol requested by server; consider upgrading MySQL client"},"original":{"code":"ER_NOT_SUPPORTED_AUTH_MODE","errno":1251,"sqlState":"08004","sqlMessage":"Client does not support authentication protocol requested by server; consider upgrading MySQL client"},"level":"error","message":"Unhandled rejection  Client does not support authentication protocol requested by server; consider upgrading MySQL client","stack":"SequelizeConnectionError: Client does not support authentication protocol requested by server; consider upgrading MySQL client\n    at C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\sequelize\\lib\\dialects\\mysql\\connection-manager.js:133:19\n    at tryCatcher (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at Promise._settlePromiseFromHandler (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\promise.js:547:31)\n    at Promise._settlePromise (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\promise.js:604:18)\n    at Promise._settlePromise0 (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\promise.js:649:10)\n    at Promise._settlePromises (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\promise.js:725:18)\n    at _drainQueueStep (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\async.js:93:12)\n    at _drainQueue (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\async.js:86:9)\n    at Async._drainQueues (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\async.js:102:5)\n    at Immediate.Async.drainQueues [as _onImmediate] (C:\\Users\\Admin\\Desktop\\NBM\\project\\project-example\\node_modules\\bluebird\\js\\release\\async.js:15:14)\n    at processImmediate (internal/timers.js:456:21)","timestamp":"2021-03-16T10:06:20.649Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:07:52.401Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:08:15.868Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 16 - 4.783 ms\n","level":"info","timestamp":"2021-03-16T10:35:14.603Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 7.231 ms\n","level":"info","timestamp":"2021-03-16T10:37:54.995Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 1.930 ms\n","level":"info","timestamp":"2021-03-16T10:38:06.227Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:38:15.306Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 16 - 218.424 ms\n","level":"info","timestamp":"2021-03-16T10:38:26.622Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 16 - 240.989 ms\n","level":"info","timestamp":"2021-03-16T10:38:58.462Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:39:10.699Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 16 - 4.930 ms\n","level":"info","timestamp":"2021-03-16T10:39:11.249Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 200 2 - 2.329 ms\n","level":"info","timestamp":"2021-03-16T10:39:22.719Z"}
+{"message":"Server started at http://localhost:8888/api","level":"info","timestamp":"2021-03-16T10:39:52.666Z"}
+{"message":"  TypeError: Converting circular structure to JSON\n      --> starting at object with constructor 'Socket'\n      |     property 'parser' -> object with constructor 'HTTPParser'\n      --- property 'socket' closes the circle\n  \n  - JSON.stringify\n  \n  - kindsOfRoomController.js:80 create\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/controllers//kindsOfRoomController.js:80:17\n  \n  - json.js:19 json\n    C:/Users/Admin/Desktop/NBM/project/project-example/src/middlewares//json.js:19:3\n  \n","level":"error","timestamp":"2021-03-16T10:39:53.394Z"}
+{"message":"127.0.0.1 - POST /api/c/kindsOfRoom HTTP/1.1 202 310 - 391.608 ms\n","level":"info","timestamp":"2021-03-16T10:39:53.412Z"}
