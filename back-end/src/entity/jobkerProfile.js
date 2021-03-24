@@ -9,28 +9,27 @@ module.exports = function(sequelize, DataTypes) {
             autoIncrement: true,
             field: 'id'
         },
+        userId: {
+            type: DataTypes.INTEGER(20),
+            field: 'user_id'
+        },
         address: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'address'
         },
         academic: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'academic'
         },
         avatar: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'avatar'
         },
         cv: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'cv'
         },
         jobPosition: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'job_position'
         }

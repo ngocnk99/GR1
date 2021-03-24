@@ -1,4 +1,4 @@
-import item from '../services/itemService'
+import jobkerProfileService from '../services/jobkerProfileService'
 import loggerHelpers from '../helpers/loggerHelpers';
 import { recordStartTime } from '../utils/loggerFormat';
 import { codeMessage } from '../utils';
@@ -19,7 +19,7 @@ export default {
                 auth: req.auth
             };
 
-            item.get_list(param).then(data => {
+            jobkerProfileService.get_list(param).then(data => {
                 const dataOutput = {
                     result: {
                         list: data.rows,
@@ -57,8 +57,8 @@ export default {
             const { id } = req.params;
             const param = { id, auth: req.auth }
 
-            // console.log("item param: ", param)
-            item.get_one(param).then(data => {
+            // console.log("jobkerProfileService param: ", param)
+            jobkerProfileService.get_one(param).then(data => {
                 res.send(data);
 
                 recordStartTime.call(res);
@@ -80,7 +80,7 @@ export default {
             const entity = res.locals.body ? res.locals.body : req.body;
             const param = { entity }
 
-            item.create(param).then(data => {
+            jobkerProfileService.create(param).then(data => {
                 if (data && data.result) {
                     const dataOutput = {
                         result: data.result,
@@ -111,7 +111,7 @@ export default {
             // const entity = req.body
             const param = { id, entity }
             console.log(param)
-            item.update(param).then(data => {
+            jobkerProfileService.update(param).then(data => {
                 if (data && data.result) {
                     const dataOutput = {
                         result: data.result,
@@ -145,7 +145,7 @@ export default {
             // const entity = { Status: 0 }
             const param = { id, auth: req.auth }
 
-            item.delete(param).then(data => {
+            jobkerProfileService.delete(param).then(data => {
                 if (data && data.status === 1) {
                     const dataOutput = {
                         result: null,
@@ -187,7 +187,7 @@ export default {
                     auth: req.auth
                 };
 
-                item.get_all(param).then(data => {
+                jobkerProfileService.get_all(param).then(data => {
                     res.send({
                         result: data,
                         success: true,

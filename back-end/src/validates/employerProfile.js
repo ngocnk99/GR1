@@ -4,29 +4,44 @@ import viMessage from '../locales/vi';
 import { sequelize } from '../db/db';
 
 const DEFAULT_SCHEMA = {
-    username: ValidateJoi.createSchemaProp({
-        string: noArguments,
-        label: viMessage['api.users.username'],
+    userId: ValidateJoi.createSchemaProp({
+        number: noArguments,
+        label: viMessage['api.employerProfile.userId'],
+        integer: noArguments,
     }),
-    password: ValidateJoi.createSchemaProp({
+    companyName: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.users.password'],
+        label: viMessage['api.employerProfile.companyName'],
+    }),
+    companyWebsite: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.employerProfile.companyWebsite'],
 
     }),
-    email: ValidateJoi.createSchemaProp({
+    address: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.users.email'],
+        label: viMessage['api.employerProfile.address'],
         allow: ['', null],
     }),
-    mobile: ValidateJoi.createSchemaProp({
+    introduce: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.users.mobile'],
+        label: viMessage['api.employerProfile.introduce'],
         allow: ['', null],
     }),
-    roleId: ValidateJoi.createSchemaProp({
-        number: noArguments,
-        label: viMessage['api.users.roleId'],
-        integer: noArguments,
+    banner: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.employerProfile.banner'],
+        allow: ['', null],
+    }),
+    avatar: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.employerProfile.avatar'],
+        allow: ['', null],
+    }),
+    member: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.employerProfile.member'],
+        allow: ['', null],
     })
 };
 
@@ -34,33 +49,33 @@ export default {
     authenCreate: (req, res, next) => {
         console.log("validate authenCreate")
             // const parentId = req.auth.userId;
-
-        const { username, password, email, mobile } = req.body;
-        const user = { username, password, email, mobile /*parentId*/ };
+        const { userId, companyName, companyWebsite, address, introduce, banner, avatar, member } = req.body;
+        const employerProfile = { userId, companyName, companyWebsite, address, introduce, banner, avatar, member };
 
         const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
-            username: {
-                regex: /\w/i,
-                max: 50,
-                min: 6,
+            userId: {
+                max: 400,
+                required: noArguments,
+            },
+            companyName: {
+                max: 200,
                 required: noArguments
             },
-            password: {
-                min: 6,
-                max: 100,
+            companyWebsite: {
+                max: 200,
+            },
+            address: {
+                max: 200,
                 required: noArguments
             },
-            email: {
-                regex: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
-                max: 100,
+            introduce: {
+                max: 2000,
             },
-            mobile: {
-                regex: /^((\84|0)+([0-9]{1}))+([0-9]{8})\b$/i,
-                max: 12,
-            },
-
+            banner: {},
+            avatar: {},
+            member: {}
         });
-        ValidateJoi.validate(user, SCHEMA)
+        ValidateJoi.validate(employerProfile, SCHEMA)
             .then((data) => {
                 res.locals.body = data;
                 next()
@@ -70,53 +85,29 @@ export default {
     authenUpdate: (req, res, next) => {
         console.log("validate authenUpdate")
 
-        const { email } = req.body;
-        const user = { email /*parentId*/ };
+        const { companyName, companyWebsite, address, introduce, banner, avatar, member } = req.body;
+        const employerProfile = { companyName, companyWebsite, address, introduce, banner, avatar, member };
 
         const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
-
-            email: {
-                regex: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
-                max: 100,
+            companyName: {
+                max: 200,
             },
-            mobile: {
-                regex: /^((\84|0)+([0-9]{1}))+([0-9]{8})\b$/i,
-                max: 12,
+            companyWebsite: {
+                max: 200,
             },
+            address: {
+                max: 200,
+            },
+            introduce: {
+                max: 2000,
+            },
+            banner: {},
+            avatar: {},
+            member: {}
 
         });
 
-        ValidateJoi.validate(user, SCHEMA)
-            .then((data) => {
-                res.locals.body = data;
-                next()
-            })
-            .catch(error => next({...error, message: "Định dạng gửi đi không đúng" }));
-    },
-    authenChangePass: (req, res, next) => {
-        console.log("validate authenUpdate")
-
-        const { oldPassword, newPassword } = req.body;
-        const user = { oldPassword, newPassword };
-
-        const SCHEMA = {
-            oldPassword: ValidateJoi.createSchemaProp({
-                string: noArguments,
-                label: viMessage['api.users.oldPassword'],
-                min: 6,
-                max: 100,
-                required: noArguments
-            }),
-            newPassword: ValidateJoi.createSchemaProp({
-                string: noArguments,
-                label: viMessage['api.users.newPassword'],
-                min: 6,
-                max: 100,
-                required: noArguments
-            }),
-        }
-
-        ValidateJoi.validate(user, SCHEMA)
+        ValidateJoi.validate(employerProfile, SCHEMA)
             .then((data) => {
                 res.locals.body = data;
                 next()
@@ -131,14 +122,12 @@ export default {
         res.locals.range = range ? JSON.parse(range) : [0, 49];
 
         if (filter) {
-            const { id, username, email, roleId, FromDate, ToDate } = JSON.parse(filter);
-            const user = { id, username, email, roleId, FromDate, ToDate };
-
-            console.log(user)
+            const { id, userId, companyName, companyWebsite, address, introduce, banner, avatar, member } = JSON.parse(filter);
+            const employerProfile = { id, userId, companyName, companyWebsite, address, introduce, banner, avatar, member };
             const SCHEMA = {
                 id: ValidateJoi.createSchemaProp({
                     string: noArguments,
-                    label: viMessage['api.users.id'],
+                    label: viMessage['api.employerProfile.id'],
                     regex: regexPattern.listIds
                 }),
                 ...DEFAULT_SCHEMA,
@@ -153,13 +142,13 @@ export default {
             };
 
             // console.log('input: ', input);
-            ValidateJoi.validate(user, SCHEMA)
+            ValidateJoi.validate(employerProfile, SCHEMA)
                 .then((data) => {
                     if (id) {
                         ValidateJoi.transStringToArray(data, 'id');
                     }
-                    if (roleId) {
-                        ValidateJoi.transStringToArray(data, 'roleId');
+                    if (userId) {
+                        ValidateJoi.transStringToArray(data, 'userId');
                     }
                     res.locals.filter = data;
                     console.log('locals.filter', res.locals.filter);

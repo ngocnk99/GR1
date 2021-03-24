@@ -2,25 +2,25 @@ import models from '../entity/index';
 import Promise from '../utils/promise';
 import * as ApiErrors from '../errors';
 
-const { items } = models;
+const { employerProfile } = models;
 
 /**
- * ItemEntity Class
+ * EmployerProfileEntity Class
  */
-class ItemEntity {
+class EmployerProfileEntity {
     /**
      *
      * @param {Object} options
      */
     static findAndCountAll(options) {
         return Promise.try(() => {
-            return items.findAndCountAll(options)
+            return employerProfile.findAndCountAll(options)
         }).catch(error => {
             throw new ApiErrors.BaseError({
                 statusCode: 202,
                 type: 'getListError',
                 error,
-                name: 'ItemEntity'
+                name: 'EmployerProfileEntity'
             })
         })
     }
@@ -31,14 +31,14 @@ class ItemEntity {
      */
     static create(entity) {
         return Promise.try(() => {
-                return items.create(entity)
+                return employerProfile.create(entity)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
                     statusCode: 202,
                     type: 'crudError',
                     error,
-                    name: 'ItemEntity'
+                    name: 'EmployerProfileEntity'
                 })
             })
     }
@@ -50,13 +50,13 @@ class ItemEntity {
      */
     static update(entity, options) {
         return Promise.try(() => {
-            return items.update(entity, options)
+            return employerProfile.update(entity, options)
                 .catch(error => {
                     throw new ApiErrors.BaseError({
                         statusCode: 202,
                         type: 'crudError',
                         error,
-                        name: 'ItemEntity'
+                        name: 'EmployerProfileEntity'
                     })
                 })
         })
@@ -68,13 +68,13 @@ class ItemEntity {
      */
     static destroy(options) {
         return Promise.try(() => {
-            return items.destroy(options)
+            return employerProfile.destroy(options)
         }).catch(error => {
             throw new ApiErrors.BaseError({
                 statusCode: 202,
                 type: 'deleteError',
                 error,
-                name: 'ItemEntity'
+                name: 'EmployerProfileEntity'
             })
         })
     }
@@ -86,14 +86,14 @@ class ItemEntity {
      */
     static findOne(options) {
         return Promise.try(() => {
-                return items.findOne(options)
+                return employerProfile.findOne(options)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
                     statusCode: 202,
                     type: 'getInfoError',
                     error,
-                    name: 'ItemEntity'
+                    name: 'EmployerProfileEntity'
                 })
             })
     }
@@ -104,14 +104,14 @@ class ItemEntity {
      */
     static findAll(options) {
         return Promise.try(() => {
-                return items.findAll(options)
+                return employerProfile.findAll(options)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
                     statusCode: 202,
                     type: 'getListError',
                     error,
-                    name: 'ItemEntity'
+                    name: 'EmployerProfileEntity'
                 })
             })
     }
@@ -122,17 +122,17 @@ class ItemEntity {
      */
     static findOrCreate(options) {
         return Promise.try(() => {
-            return items.findOrCreate(options)
+            return employerProfile.findOrCreate(options)
                 // .spread(async (findReportImExCreate, created) => {
         }).catch(error => {
             throw new ApiErrors.BaseError({
                 statusCode: 202,
                 type: 'getListError',
                 error,
-                name: 'ItemEntity'
+                name: 'EmployerProfileEntity'
             })
         })
     }
 }
 
-export default ItemEntity;
+export default EmployerProfileEntity;

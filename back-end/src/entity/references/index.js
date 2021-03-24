@@ -1,10 +1,19 @@
 export default models => {
     // eslint-disable-next-line no-empty-pattern
-    const { items, users, roles } = models;
+    const { employerProfile, jobkerProfile, users, roles } = models;
 
-    // users(n) - (1)roles
+    //roles(1) - (n)users 
     roles.hasMany(users, { foreignKey: 'roleId', as: 'users' });
     users.belongsTo(roles, { foreignKey: 'roleId', as: 'role' });
+
+    // users(1) - (1)employerProfile
+    users.hasOne(employerProfile, { foreignKey: 'userId', as: 'employerProfile' });
+    employerProfile.belongsTo(users, { foreignKey: 'userId', as: 'user' });
+
+    // users(1) - (1)employerProfile
+    users.hasOne(jobkerProfile, { foreignKey: 'userId', as: 'jobkerProfile' });
+    jobkerProfile.belongsTo(users, { foreignKey: 'userId', as: 'user' });
+
 
     // room
     // rooms.belongsToMany(items, { foreignKey: 'roomId', as: 'items', through: 'roomItem' });

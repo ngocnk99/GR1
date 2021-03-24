@@ -1,7 +1,7 @@
-import items from './vi-Vn/roles';
-import roles from './vi-Vn/items';
+import roles from './vi-Vn/roles';
 import users from './vi-Vn/users';
-
+import employerProfile from './vi-Vn/emloyerProfile'
+import jobkerProfile from './vi-Vn/jobkerProfile'
 
 export default {
     roles: 'Quyền',
@@ -16,7 +16,8 @@ export default {
     'api.message.infoAfterEditError': 'Lấy thông tin sau khi thay đổi thất bại',
     'api.message.notExisted': 'Bản ghi này không tồn tại!',
 
-    ...items,
     ...roles,
     ...users,
+    ...employerProfile,
+    ...jobkerProfile,
 }

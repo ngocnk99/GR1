@@ -27,9 +27,10 @@ Object.keys(db).forEach(function(modelName) {
 }); */
 
 const modules = [
-    require('./items'),
     require('./roles'),
     require('./users'),
+    require('./employerProfile'),
+    require('./jobkerProfile'),
 ];
 
 // Initialize models

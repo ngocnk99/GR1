@@ -4,29 +4,64 @@ import viMessage from '../locales/vi';
 import { sequelize } from '../db/db';
 
 const DEFAULT_SCHEMA = {
-    name: ValidateJoi.createSchemaProp({
+    userId: ValidateJoi.createSchemaProp({
+        number: noArguments,
+        label: viMessage['api.jobkerProfile.userId'],
+        integer: noArguments,
+    }),
+    academic: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.items.name'],
+        label: viMessage['api.jobkerProfile.academic'],
+    }),
+    address: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.jobkerProfile.address'],
+        allow: ['', null],
+    }),
+    jobPosition: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.jobkerProfile.jobPosition'],
+        allow: ['', null],
+    }),
+    cv: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.jobkerProfile.cv'],
+        allow: ['', null],
+    }),
+    avatar: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage['api.jobkerProfile.avatar'],
+        allow: ['', null],
     }),
 };
 
 export default {
     authenCreate: (req, res, next) => {
         console.log("validate authenCreate")
-            // const usersCreatorId = req.auth.userId;
+            // const parentId = req.auth.userId;
 
-        const { name } = req.body;
-        const item = { name };
+        const { userId, academic, address, jobPosition, cv, avatar } = req.body;
+        const jobkerProfile = { userId, academic, address, jobPosition, cv, avatar };
 
         const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
-            name: {
-                max: 45,
+            userId: {
+                max: 400,
+                required: noArguments,
+            },
+            academic: {
+                max: 200,
+            },
+            address: {
+                max: 200,
                 required: noArguments
             },
+            jobPosition: {
+                max: 2000,
+            },
+            cv: {},
+            avatar: {}
         });
-
-        console.log(item)
-        ValidateJoi.validate(item, SCHEMA)
+        ValidateJoi.validate(jobkerProfile, SCHEMA)
             .then((data) => {
                 res.locals.body = data;
                 next()
@@ -36,16 +71,24 @@ export default {
     authenUpdate: (req, res, next) => {
         console.log("validate authenUpdate")
 
-        const { name } = req.body;
-        const item = { name };
+        const { companyName, academic, address, jobPosition, cv, avatar } = req.body;
+        const jobkerProfile = { companyName, academic, address, jobPosition, cv, avatar };
 
         const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
-            name: {
-                max: 45,
+            academic: {
+                max: 200,
             },
+            address: {
+                max: 200,
+            },
+            jobPosition: {
+                max: 2000,
+            },
+            cv: {},
+            avatar: {},
         });
 
-        ValidateJoi.validate(item, SCHEMA)
+        ValidateJoi.validate(jobkerProfile, SCHEMA)
             .then((data) => {
                 res.locals.body = data;
                 next()
@@ -60,14 +103,12 @@ export default {
         res.locals.range = range ? JSON.parse(range) : [0, 49];
 
         if (filter) {
-            const { id, name, FromDate, ToDate } = JSON.parse(filter);
-            const item = { id, name, FromDate, ToDate };
-
-            console.log(item)
+            const { id, userId, academic, address, jobPosition, cv, avatar } = JSON.parse(filter);
+            const jobkerProfile = { id, userId, academic, address, jobPosition, cv, avatar };
             const SCHEMA = {
                 id: ValidateJoi.createSchemaProp({
                     string: noArguments,
-                    label: viMessage['api.items.id'],
+                    label: viMessage['api.jobkerProfile.id'],
                     regex: regexPattern.listIds
                 }),
                 ...DEFAULT_SCHEMA,
@@ -82,12 +123,14 @@ export default {
             };
 
             // console.log('input: ', input);
-            ValidateJoi.validate(item, SCHEMA)
+            ValidateJoi.validate(jobkerProfile, SCHEMA)
                 .then((data) => {
                     if (id) {
                         ValidateJoi.transStringToArray(data, 'id');
                     }
-
+                    if (userId) {
+                        ValidateJoi.transStringToArray(data, 'userId');
+                    }
                     res.locals.filter = data;
                     console.log('locals.filter', res.locals.filter);
                     next();

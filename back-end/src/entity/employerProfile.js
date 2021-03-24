@@ -9,38 +9,35 @@ module.exports = function(sequelize, DataTypes) {
             autoIncrement: true,
             field: 'id'
         },
+        userId: {
+            type: DataTypes.INTEGER(20),
+            field: 'user_id'
+        },
         companyName: {
             type: DataTypes.STRING,
-            allowNull: false,
             field: 'company_name'
         },
         companyWebsite: {
             type: DataTypes.STRING,
-            allowNull: false,
             field: 'company_website'
         },
         address: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'address'
         },
         introduce: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'introduce'
         },
         banner: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'banner'
         },
         avatar: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'avatar'
         },
         member: {
-            allowNull: false,
             type: DataTypes.STRING,
             field: 'member'
         }
