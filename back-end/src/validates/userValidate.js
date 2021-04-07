@@ -27,7 +27,11 @@ const DEFAULT_SCHEMA = {
         number: noArguments,
         label: viMessage['api.users.roleId'],
         integer: noArguments,
-    })
+    }),
+    token: ValidateJoi.createSchemaProp({
+        string: noArguments,
+        label: viMessage.token,
+    }),
 };
 
 export default {
@@ -69,12 +73,16 @@ export default {
     },
     authenUpdate: (req, res, next) => {
         console.log("validate authenUpdate")
-
-        const { email } = req.body;
-        const user = { email /*parentId*/ };
-
+        console.log("validate authenCreate")
+            // const parentId = req.auth.userId;
+        const token = req.headers["x-access-token"];
+        const { email, mobile } = req.body;
+        const jobker = { token, mobile, email };
+        console.log(jobker)
         const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
-
+            token: {
+                required: noArguments,
+            },
             email: {
                 regex: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
                 max: 100,
@@ -83,10 +91,9 @@ export default {
                 regex: /^((\84|0)+([0-9]{1}))+([0-9]{8})\b$/i,
                 max: 12,
             },
-
         });
-
-        ValidateJoi.validate(user, SCHEMA)
+        console.log('test1')
+        ValidateJoi.validate(jobker, SCHEMA)
             .then((data) => {
                 res.locals.body = data;
                 next()
@@ -95,9 +102,9 @@ export default {
     },
     authenChangePass: (req, res, next) => {
         console.log("validate authenUpdate")
-
+        const token = req.headers["x-access-token"];
         const { oldPassword, newPassword } = req.body;
-        const user = { oldPassword, newPassword };
+        const user = { oldPassword, newPassword, token };
 
         const SCHEMA = {
             oldPassword: ValidateJoi.createSchemaProp({
@@ -114,6 +121,10 @@ export default {
                 max: 100,
                 required: noArguments
             }),
+            token: {
+                max: 1000,
+                required: noArguments,
+            },
         }
 
         ValidateJoi.validate(user, SCHEMA)

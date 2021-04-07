@@ -2,7 +2,7 @@ import models from '../entity/index';
 import Promise from '../utils/promise';
 import * as ApiErrors from '../errors';
 
-const { jobkerProfile } = models;
+const { jobker } = models;
 
 /**
  * JobkerProfileEntity Class
@@ -14,7 +14,7 @@ class JobkerProfileEntity {
      */
     static findAndCountAll(options) {
         return Promise.try(() => {
-            return jobkerProfile.findAndCountAll(options)
+            return jobker.findAndCountAll(options)
         }).catch(error => {
             throw new ApiErrors.BaseError({
                 statusCode: 202,
@@ -31,7 +31,7 @@ class JobkerProfileEntity {
      */
     static create(entity) {
         return Promise.try(() => {
-                return jobkerProfile.create(entity)
+                return jobker.create(entity)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
@@ -50,7 +50,7 @@ class JobkerProfileEntity {
      */
     static update(entity, options) {
         return Promise.try(() => {
-            return jobkerProfile.update(entity, options)
+            return jobker.update(entity, options)
                 .catch(error => {
                     throw new ApiErrors.BaseError({
                         statusCode: 202,
@@ -68,7 +68,7 @@ class JobkerProfileEntity {
      */
     static destroy(options) {
         return Promise.try(() => {
-            return jobkerProfile.destroy(options)
+            return jobker.destroy(options)
         }).catch(error => {
             throw new ApiErrors.BaseError({
                 statusCode: 202,
@@ -86,7 +86,7 @@ class JobkerProfileEntity {
      */
     static findOne(options) {
         return Promise.try(() => {
-                return jobkerProfile.findOne(options)
+                return jobker.findOne(options)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
@@ -104,7 +104,7 @@ class JobkerProfileEntity {
      */
     static findAll(options) {
         return Promise.try(() => {
-                return jobkerProfile.findAll(options)
+                return jobker.findAll(options)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
@@ -122,7 +122,7 @@ class JobkerProfileEntity {
      */
     static findOrCreate(options) {
         return Promise.try(() => {
-            return jobkerProfile.findOrCreate(options)
+            return jobker.findOrCreate(options)
                 // .spread(async (findReportImExCreate, created) => {
         }).catch(error => {
             throw new ApiErrors.BaseError({

@@ -1,13 +1,14 @@
-import employerProfile from '../models/employerProfile'
-// import models from '../entity/index'
+import employer from '../models/employer'
+import usersModel from '../models/users'
+import models from '../entity/index'
 import _ from 'lodash';
 
 import * as ApiErrors from '../errors';
 import ErrorHelpers from '../helpers/errorHelpers';
 import filterHelpers from '../helpers/filterHelpers';
 import preCheckHelpers, { TYPE_CHECK } from '../helpers/preCheckHelpers';
-
-// const {  rooms } = models;
+const { getUserId } = require('../utils')
+const { users } = models;
 
 export default {
     get_list: async param => {
@@ -15,12 +16,6 @@ export default {
         try {
             let { filter, range, sort, /* auth */ } = param;
             let whereFilter = filter;
-            if (!range) {
-                range = [0, 4]
-            }
-            if (!sort) {
-                sort = ['id', 'ASC']
-            }
             const perPage = (range[1] - range[0]) + 1
             const page = Math.floor(range[0] / perPage);
 
@@ -32,15 +27,23 @@ export default {
 
             console.log('where', whereFilter);
 
-            const result = await employerProfile.findAndCountAll({
+            const result = await employer.findAndCountAll({
                 where: whereFilter,
                 order: [sort],
                 offset: range[0],
                 limit: perPage,
+                include: {
+                    model: users,
+                    as: 'user',
+                    attributes: {
+                        // include: [],
+                        exclude: ['password']
+                    },
+                }
             }).catch(err => {
                 ErrorHelpers.errorThrow(err, 'getListError', 'employerProfileService')
             });
-
+            console.log(result)
             finnalyResult = {
                 ...result,
                 page: page + 1,
@@ -58,8 +61,16 @@ export default {
         try {
             const { id /* , auth */ } = param;
             const whereFilter = { 'id': id };
-            const result = await employerProfile.findOne({
+            const result = await employer.findOne({
                 where: whereFilter,
+                include: {
+                    model: users,
+                    as: 'user',
+                    attributes: {
+                        // include: [],
+                        exclude: ['password']
+                    },
+                }
             }).catch(err => {
                 ErrorHelpers.errorThrow(err, 'getInfoError', 'employerProfileService')
             });
@@ -84,12 +95,28 @@ export default {
 
         try {
             const entity = param.entity;
+            const { userId, roleId } = getUserId(entity.token);
+            param.entity.userId = userId;
+            if (roleId != 2) {
+                throw new ApiErrors.BaseError({
+                    statusCode: 202,
+                    type: 'getInfoError',
+                    message: 'Bạn không có quyền hạn này'
+                })
+            }
             const infoArr = Array.from(await Promise.all([
-                preCheckHelpers.createPromiseCheck(employerProfile.findOne, {
+                preCheckHelpers.createPromiseCheck(employer.findOne, {
                     where: {
-                        userId: entity.userId,
+                        userId: userId,
                     }
-                }, entity.userId ? true : false, TYPE_CHECK.CHECK_DUPLICATE, { parent: 'api.employerProfiles.userId' }),
+                }, entity.userId ? true : false, TYPE_CHECK.CHECK_DUPLICATE, { parent: 'api.employer.userId' }),
+                preCheckHelpers.createPromiseCheck(usersModel.findOne, {
+                        where: {
+                            id: userId,
+                        }
+                    },
+                    userId ? true : false, TYPE_CHECK.CHECK_EXISTS, { parent: 'api.employer.userId' }
+                ),
             ]));
             if (!preCheckHelpers.check(infoArr)) {
                 throw new ApiErrors.BaseError({
@@ -98,7 +125,7 @@ export default {
                     message: 'Không xác thực được thông tin gửi lên'
                 })
             }
-            finnalyResult = await employerProfile.create(param.entity).catch(error => {
+            finnalyResult = await employer.create(param.entity).catch(error => {
                 throw (new ApiErrors.BaseError({
                     statusCode: 202,
                     type: 'crudError',
@@ -124,14 +151,21 @@ export default {
 
         try {
             const entity = param.entity;
-
+            const newInfo = _.omit(entity, ['token']);
+            const { userId, roleId } = getUserId(entity.token);
             console.log("Site update: ", entity)
-
-            const foundSite = await employerProfile.findOne({
+            if (roleId != 2) {
+                throw new ApiErrors.BaseError({
+                    statusCode: 202,
+                    type: 'getInfoError',
+                    message: 'Bạn không có quyền hạn này'
+                })
+            }
+            const foundSite = await employer.findOne({
                 where: {
-                    "id": param.id
+                    "userId": userId
                 }
-            }).catch(error => { throw preCheckHelpers.createErrorCheck({ typeCheck: TYPE_CHECK.GET_INFO, modelStructure: { parent: 'employerProfile' } }, error) });
+            }).catch(error => { throw preCheckHelpers.createErrorCheck({ typeCheck: TYPE_CHECK.GET_INFO, modelStructure: { parent: 'employer' } }, error) });
 
             if (!foundSite) {
                 throw (new ApiErrors.BaseError({
@@ -140,8 +174,8 @@ export default {
                 }));
             }
 
-            await employerProfile.update(
-                entity, { where: { id: parseInt(param.id) } }
+            await employer.update(
+                newInfo, { where: { userId: userId } }
             ).catch(error => {
                 throw (new ApiErrors.BaseError({
                     statusCode: 202,
@@ -150,7 +184,7 @@ export default {
                 }));
             });
 
-            finnalyResult = await employerProfile.findOne({ where: { Id: param.id } }).catch(error => {
+            finnalyResult = await employer.findOne({ where: { "userId": userId } }).catch(error => {
                 throw (new ApiErrors.BaseError({
                     statusCode: 202,
                     type: 'crudInfo',
@@ -173,11 +207,13 @@ export default {
     },
     delete: async param => {
         try {
-            console.log('delete id', param.id);
+            const entity = param.entity;
+            const { userId } = getUserId(entity.token)
+            console.log('delete userId', userId);
 
-            const foundSite = await employerProfile.findOne({
+            const foundSite = await employer.findOne({
                 where: {
-                    "id": param.id
+                    "userId": userId
                 }
             }).catch((error) => {
                 throw new ApiErrors.BaseError({
@@ -193,9 +229,9 @@ export default {
                     type: 'crudNotExisted',
                 });
             } else {
-                await employerProfile.destroy({ where: { id: parseInt(param.id) } });
+                await employer.destroy({ where: { "userId": userId } });
 
-                const siteAfterDelete = await employerProfile.findOne({ where: { Id: param.id } })
+                const siteAfterDelete = await employer.findOne({ "userId": userId })
                     .catch(err => {
                         ErrorHelpers.errorThrow(err, 'crudError', 'employerProfileService');
                     });
@@ -238,14 +274,17 @@ export default {
                 whereFilter = {...filter }
             }
 
-            finnalyResult = await employerProfile.findAll({
+            finnalyResult = await employer.findAll({
                 where: whereFilter,
                 order: [sort],
-                include: [{
-                        model: roomemployerProfile,
+                include: {
+                    model: users,
+                    as: 'user',
+                    attributes: {
+                        // include: [],
+                        exclude: ['password']
                     },
-                    // 'rooms'
-                ]
+                }
             }).catch(err => {
                 ErrorHelpers.errorThrow(err, 'getListError', 'employerProfileService')
             });

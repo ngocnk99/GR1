@@ -2,7 +2,7 @@ import models from '../entity/index';
 import Promise from '../utils/promise';
 import * as ApiErrors from '../errors';
 
-const { employerProfile } = models;
+const { employer } = models;
 
 /**
  * EmployerProfileEntity Class
@@ -14,7 +14,7 @@ class EmployerProfileEntity {
      */
     static findAndCountAll(options) {
         return Promise.try(() => {
-            return employerProfile.findAndCountAll(options)
+            return employer.findAndCountAll(options)
         }).catch(error => {
             throw new ApiErrors.BaseError({
                 statusCode: 202,
@@ -31,7 +31,7 @@ class EmployerProfileEntity {
      */
     static create(entity) {
         return Promise.try(() => {
-                return employerProfile.create(entity)
+                return employer.create(entity)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
@@ -50,7 +50,7 @@ class EmployerProfileEntity {
      */
     static update(entity, options) {
         return Promise.try(() => {
-            return employerProfile.update(entity, options)
+            return employer.update(entity, options)
                 .catch(error => {
                     throw new ApiErrors.BaseError({
                         statusCode: 202,
@@ -68,7 +68,7 @@ class EmployerProfileEntity {
      */
     static destroy(options) {
         return Promise.try(() => {
-            return employerProfile.destroy(options)
+            return employer.destroy(options)
         }).catch(error => {
             throw new ApiErrors.BaseError({
                 statusCode: 202,
@@ -86,7 +86,7 @@ class EmployerProfileEntity {
      */
     static findOne(options) {
         return Promise.try(() => {
-                return employerProfile.findOne(options)
+                return employer.findOne(options)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
@@ -104,7 +104,7 @@ class EmployerProfileEntity {
      */
     static findAll(options) {
         return Promise.try(() => {
-                return employerProfile.findAll(options)
+                return employer.findAll(options)
             })
             .catch(error => {
                 throw new ApiErrors.BaseError({
@@ -122,7 +122,7 @@ class EmployerProfileEntity {
      */
     static findOrCreate(options) {
         return Promise.try(() => {
-            return employerProfile.findOrCreate(options)
+            return employer.findOrCreate(options)
                 // .spread(async (findReportImExCreate, created) => {
         }).catch(error => {
             throw new ApiErrors.BaseError({

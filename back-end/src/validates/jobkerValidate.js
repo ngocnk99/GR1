@@ -6,76 +6,66 @@ import { sequelize } from '../db/db';
 const DEFAULT_SCHEMA = {
     userId: ValidateJoi.createSchemaProp({
         number: noArguments,
-        label: viMessage['api.employerProfile.userId'],
+        label: viMessage['api.jobker.userId'],
         integer: noArguments,
     }),
-    companyName: ValidateJoi.createSchemaProp({
+    token: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.employerProfile.companyName'],
+        label: viMessage.token,
     }),
-    companyWebsite: ValidateJoi.createSchemaProp({
+    academic: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.employerProfile.companyWebsite'],
-
+        label: viMessage['api.jobker.academic'],
     }),
     address: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.employerProfile.address'],
+        label: viMessage['api.jobker.address'],
         allow: ['', null],
     }),
-    introduce: ValidateJoi.createSchemaProp({
-        string: noArguments,
-        label: viMessage['api.employerProfile.introduce'],
+    jobPosition: ValidateJoi.createSchemaProp({
+        array: noArguments,
+        label: viMessage['api.jobker.jobPosition'],
         allow: ['', null],
     }),
-    banner: ValidateJoi.createSchemaProp({
+    cv: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.employerProfile.banner'],
+        label: viMessage['api.jobker.cv'],
         allow: ['', null],
     }),
     avatar: ValidateJoi.createSchemaProp({
         string: noArguments,
-        label: viMessage['api.employerProfile.avatar'],
+        label: viMessage['api.jobker.avatar'],
         allow: ['', null],
     }),
-    member: ValidateJoi.createSchemaProp({
-        string: noArguments,
-        label: viMessage['api.employerProfile.member'],
-        allow: ['', null],
-    })
 };
 
 export default {
     authenCreate: (req, res, next) => {
         console.log("validate authenCreate")
             // const parentId = req.auth.userId;
-        const { userId, companyName, companyWebsite, address, introduce, banner, avatar, member } = req.body;
-        const employerProfile = { userId, companyName, companyWebsite, address, introduce, banner, avatar, member };
+        const token = req.headers["x-access-token"];
+        const { academic, address, jobPosition, cv, avatar } = req.body;
+        const jobker = { token, academic, address, jobPosition, cv, avatar };
 
         const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
-            userId: {
-                max: 400,
+            token: {
+                max: 1000,
                 required: noArguments,
             },
-            companyName: {
-                max: 200,
-                required: noArguments
-            },
-            companyWebsite: {
+            academic: {
                 max: 200,
             },
             address: {
                 max: 200,
                 required: noArguments
             },
-            introduce: {
+            jobPosition: {
                 max: 2000,
             },
-            banner: {},
-            avatar: {},
-            member: {}
+            cv: {},
+            avatar: {}
         });
-        ValidateJoi.validate(employerProfile, SCHEMA)
+        ValidateJoi.validate(jobker, SCHEMA)
             .then((data) => {
                 res.locals.body = data;
                 next()
@@ -84,30 +74,29 @@ export default {
     },
     authenUpdate: (req, res, next) => {
         console.log("validate authenUpdate")
-
-        const { companyName, companyWebsite, address, introduce, banner, avatar, member } = req.body;
-        const employerProfile = { companyName, companyWebsite, address, introduce, banner, avatar, member };
+        const token = req.headers["x-access-token"];
+        const { companyName, academic, address, jobPosition, cv, avatar } = req.body;
+        const jobker = { token, companyName, academic, address, jobPosition, cv, avatar };
 
         const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
-            companyName: {
-                max: 200,
+            token: {
+                max: 1000,
+                required: noArguments,
             },
-            companyWebsite: {
+            academic: {
                 max: 200,
             },
             address: {
                 max: 200,
             },
-            introduce: {
+            jobPosition: {
                 max: 2000,
             },
-            banner: {},
+            cv: {},
             avatar: {},
-            member: {}
-
         });
 
-        ValidateJoi.validate(employerProfile, SCHEMA)
+        ValidateJoi.validate(jobker, SCHEMA)
             .then((data) => {
                 res.locals.body = data;
                 next()
@@ -122,12 +111,12 @@ export default {
         res.locals.range = range ? JSON.parse(range) : [0, 49];
 
         if (filter) {
-            const { id, userId, companyName, companyWebsite, address, introduce, banner, avatar, member } = JSON.parse(filter);
-            const employerProfile = { id, userId, companyName, companyWebsite, address, introduce, banner, avatar, member };
+            const { id, userId, academic, address, jobPosition, cv, avatar } = JSON.parse(filter);
+            const jobker = { id, userId, academic, address, jobPosition, cv, avatar };
             const SCHEMA = {
                 id: ValidateJoi.createSchemaProp({
                     string: noArguments,
-                    label: viMessage['api.employerProfile.id'],
+                    label: viMessage['api.jobker.id'],
                     regex: regexPattern.listIds
                 }),
                 ...DEFAULT_SCHEMA,
@@ -142,7 +131,7 @@ export default {
             };
 
             // console.log('input: ', input);
-            ValidateJoi.validate(employerProfile, SCHEMA)
+            ValidateJoi.validate(jobker, SCHEMA)
                 .then((data) => {
                     if (id) {
                         ValidateJoi.transStringToArray(data, 'id');
@@ -161,5 +150,24 @@ export default {
             res.locals.filter = {};
             next()
         }
-    }
+    },
+    authenDelete: (req, res, next) => {
+        console.log("validate delete")
+        const token = req.headers["x-access-token"];
+        const jobker = { token };
+
+        const SCHEMA = ValidateJoi.assignSchema(DEFAULT_SCHEMA, {
+            token: {
+                max: 1000,
+                required: noArguments,
+            }
+        });
+
+        ValidateJoi.validate(jobker, SCHEMA)
+            .then((data) => {
+                res.locals.body = data;
+                next()
+            })
+            .catch(error => next({...error, message: "Định dạng gửi đi không đúng" }));
+    },
 }

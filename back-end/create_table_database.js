@@ -8,6 +8,7 @@ const SQL_POOL_MAX = 50
 const SQL_POOL_MIN = 0
 const SQL_POOL_CONNECTION_TIMEOUT = 1000000
 const SQL_POOL_IDLE_TIMEOUT_MILLIS = 1000000
+const { result } = require('lodash')
 const { Sequelize, DataTypes, Op } = require('sequelize');
 
 const sequelize = new Sequelize(SQL_DATABASE, SQL_USER, SQL_PASSWORD, {
@@ -24,7 +25,7 @@ const sequelize = new Sequelize(SQL_DATABASE, SQL_USER, SQL_PASSWORD, {
     }
 });
 
-const Users = sequelize.define("users", {
+const users = sequelize.define("users", {
     id: {
         type: DataTypes.INTEGER(20),
         allowNull: false,
@@ -62,7 +63,7 @@ const Users = sequelize.define("users", {
     tableName: 'users'
 });
 
-const Roles = sequelize.define("roles", {
+const roles = sequelize.define("roles", {
     id: {
         type: DataTypes.INTEGER(20),
         allowNull: false,
@@ -78,7 +79,7 @@ const Roles = sequelize.define("roles", {
     tableName: 'roles'
 });
 
-const EmployerProfile = sequelize.define("employerProfile", {
+const employer = sequelize.define("employer", {
     id: {
         type: DataTypes.INTEGER(20),
         allowNull: false,
@@ -120,10 +121,10 @@ const EmployerProfile = sequelize.define("employerProfile", {
     }
 }, {
     timestamps: false,
-    tableName: 'employer_profile'
+    tableName: 'employer'
 });
 
-const JobkerProfile = sequelize.define("jobkerProfile", {
+const jobker = sequelize.define("jobker", {
     id: {
         type: DataTypes.INTEGER(20),
         allowNull: false,
@@ -157,23 +158,31 @@ const JobkerProfile = sequelize.define("jobkerProfile", {
     }
 }, {
     timestamps: false,
-    tableName: 'jobker_profile'
+    tableName: 'jobker'
 });
 //roles(1)- (n)users
-Roles.hasMany(Users, { foreignKey: 'roleId', as: 'users' });
-Users.belongsTo(Roles, { foreignKey: 'roleId', as: 'role' });
-// users(1) - (1)employerProfile
-Users.hasOne(EmployerProfile, { foreignKey: 'userId', as: 'employerProfile' });
-EmployerProfile.belongsTo(Users, { foreignKey: 'userId', as: 'user' });
+roles.hasMany(users, { foreignKey: 'roleId', as: 'users' });
+users.belongsTo(roles, { foreignKey: 'roleId', as: 'role' });
+// users(1) - (1)employer
+users.hasOne(employer, { foreignKey: 'userId', as: 'employer' });
+employer.belongsTo(users, { foreignKey: 'userId', as: 'user' });
 
-// users(1) - (1)employerProfile
-Users.hasOne(JobkerProfile, { foreignKey: 'userId', as: 'jobkerProfile' });
-JobkerProfile.belongsTo(Users, { foreignKey: 'userId', as: 'user' });
+// users(1) - (1)employer
+users.hasOne(jobker, { foreignKey: 'userId', as: 'jobker' });
+jobker.belongsTo(users, { foreignKey: 'userId', as: 'user' });
+
 
 
 (async() => {
     await sequelize.sync({ alter: true });
-    // await Roles.create({ name: 'jobker' });
-    // await Roles.create({ name: 'employer' })
-    // await Roles.create({ name: 'admin' })
+    // await roles.create({ name: 'jobker' });
+    // await roles.create({ name: 'employer' })
+    // await roles.create({ name: 'admin' })
+    const result = await users.findAll({
+        include: {
+            model: roles,
+            as: "role"
+        }
+    })
+    console.log(result)
 })();

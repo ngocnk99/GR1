@@ -1,13 +1,15 @@
-import jobkerProfile from '../models/jobkerProfile'
-// import models from '../entity/index'
+import jobker from '../models/jobker'
+import usersModel from '../models/users'
+import models from '../entity/index'
 import _ from 'lodash';
 
 import * as ApiErrors from '../errors';
 import ErrorHelpers from '../helpers/errorHelpers';
 import filterHelpers from '../helpers/filterHelpers';
 import preCheckHelpers, { TYPE_CHECK } from '../helpers/preCheckHelpers';
+const { getUserId } = require('../utils')
 
-// const {  rooms } = models;
+const { users } = models;
 
 export default {
     get_list: async param => {
@@ -32,13 +34,21 @@ export default {
 
             console.log('where', whereFilter);
 
-            const result = await jobkerProfile.findAndCountAll({
+            const result = await jobker.findAndCountAll({
                 where: whereFilter,
                 order: [sort],
                 offset: range[0],
                 limit: perPage,
+                include: {
+                    model: users,
+                    as: 'user',
+                    attributes: {
+                        // include: [],
+                        exclude: ['password']
+                    },
+                }
             }).catch(err => {
-                ErrorHelpers.errorThrow(err, 'getListError', 'jobkerProfileService')
+                ErrorHelpers.errorThrow(err, 'getListError', 'jobkerService')
             });
 
             finnalyResult = {
@@ -48,7 +58,7 @@ export default {
             };
 
         } catch (err) {
-            ErrorHelpers.errorThrow(err, 'getListError', 'jobkerProfileService')
+            ErrorHelpers.errorThrow(err, 'getListError', 'jobkerService')
         }
 
         return finnalyResult;
@@ -58,10 +68,18 @@ export default {
         try {
             const { id /* , auth */ } = param;
             const whereFilter = { 'id': id };
-            const result = await jobkerProfile.findOne({
+            const result = await jobker.findOne({
                 where: whereFilter,
+                include: {
+                    model: users,
+                    as: 'user',
+                    attributes: {
+                        // include: [],
+                        exclude: ['password']
+                    },
+                }
             }).catch(err => {
-                ErrorHelpers.errorThrow(err, 'getInfoError', 'jobkerProfileService')
+                ErrorHelpers.errorThrow(err, 'getInfoError', 'jobkerService')
             });
 
             if (!result) {
@@ -74,22 +92,38 @@ export default {
             finnalyResult = result;
 
         } catch (err) {
-            ErrorHelpers.errorThrow(err, 'getInfoError', 'jobkerProfileService')
+            ErrorHelpers.errorThrow(err, 'getInfoError', 'jobkerService')
         }
 
         return finnalyResult;
     },
     create: async param => {
         let finnalyResult;
-
         try {
             const entity = param.entity;
+            const { userId, roleId } = getUserId(entity.token);
+            param.entity.userId = userId;
+            if (roleId != 1) {
+                throw new ApiErrors.BaseError({
+                    statusCode: 202,
+                    type: 'getInfoError',
+                    message: 'Bạn không có quyền hạn này'
+                })
+            }
+
             const infoArr = Array.from(await Promise.all([
-                preCheckHelpers.createPromiseCheck(jobkerProfile.findOne, {
+                preCheckHelpers.createPromiseCheck(jobker.findOne, {
                     where: {
-                        userId: entity.userId,
+                        userId: userId,
                     }
-                }, entity.userId ? true : false, TYPE_CHECK.CHECK_DUPLICATE, { parent: 'api.jobkerProfiles.userId' }),
+                }, userId ? true : false, TYPE_CHECK.CHECK_DUPLICATE, { parent: 'api.jobker.userId' }),
+                preCheckHelpers.createPromiseCheck(usersModel.findOne, {
+                        where: {
+                            id: userId,
+                        }
+                    },
+                    userId ? true : false, TYPE_CHECK.CHECK_EXISTS, { parent: 'api.jobker.userId' }
+                )
             ]));
             if (!preCheckHelpers.check(infoArr)) {
                 throw new ApiErrors.BaseError({
@@ -98,7 +132,7 @@ export default {
                     message: 'Không xác thực được thông tin gửi lên'
                 })
             }
-            finnalyResult = await jobkerProfile.create(param.entity).catch(error => {
+            finnalyResult = await jobker.create(param.entity).catch(error => {
                 throw (new ApiErrors.BaseError({
                     statusCode: 202,
                     type: 'crudError',
@@ -114,7 +148,7 @@ export default {
             }
 
         } catch (error) {
-            ErrorHelpers.errorThrow(error, 'crudError', 'jobkerProfileService');
+            ErrorHelpers.errorThrow(error, 'crudError', 'jobkerService');
         }
 
         return { result: finnalyResult };
@@ -124,14 +158,22 @@ export default {
 
         try {
             const entity = param.entity;
+            const newInfo = _.omit(entity, ['token']);
+            const { userId, roleId } = getUserId(entity.token)
+            if (roleId != 1) {
+                throw new ApiErrors.BaseError({
+                    statusCode: 202,
+                    type: 'getInfoError',
+                    message: 'Bạn không có quyền hạn này'
+                })
+            }
+            console.log("profile update: ", newInfo)
 
-            console.log("Site update: ", entity)
-
-            const foundSite = await jobkerProfile.findOne({
+            const foundSite = await jobker.findOne({
                 where: {
-                    "id": param.id
+                    "userId": userId
                 }
-            }).catch(error => { throw preCheckHelpers.createErrorCheck({ typeCheck: TYPE_CHECK.GET_INFO, modelStructure: { parent: 'jobkerProfile' } }, error) });
+            }).catch(error => { throw preCheckHelpers.createErrorCheck({ typeCheck: TYPE_CHECK.GET_INFO, modelStructure: { parent: 'jobker' } }, error) });
 
             if (!foundSite) {
                 throw (new ApiErrors.BaseError({
@@ -140,8 +182,8 @@ export default {
                 }));
             }
 
-            await jobkerProfile.update(
-                entity, { where: { id: parseInt(param.id) } }
+            await jobker.update(
+                newInfo, { where: { userId: userId } }
             ).catch(error => {
                 throw (new ApiErrors.BaseError({
                     statusCode: 202,
@@ -150,7 +192,7 @@ export default {
                 }));
             });
 
-            finnalyResult = await jobkerProfile.findOne({ where: { Id: param.id } }).catch(error => {
+            finnalyResult = await jobker.findOne({ where: { "userId": userId } }).catch(error => {
                 throw (new ApiErrors.BaseError({
                     statusCode: 202,
                     type: 'crudInfo',
@@ -166,18 +208,20 @@ export default {
             }
 
         } catch (error) {
-            ErrorHelpers.errorThrow(error, 'crudError', 'jobkerProfileService');
+            ErrorHelpers.errorThrow(error, 'crudError', 'jobkerService');
         }
 
         return { result: finnalyResult };
     },
     delete: async param => {
         try {
-            console.log('delete id', param.id);
+            const entity = param.entity;
+            const { userId } = getUserId(entity.token)
+            console.log('delete userid', userId);
 
-            const foundSite = await jobkerProfile.findOne({
+            const foundSite = await jobker.findOne({
                 where: {
-                    "id": param.id
+                    "userId": userId
                 }
             }).catch((error) => {
                 throw new ApiErrors.BaseError({
@@ -193,11 +237,11 @@ export default {
                     type: 'crudNotExisted',
                 });
             } else {
-                await jobkerProfile.destroy({ where: { id: parseInt(param.id) } });
+                await jobker.destroy({ where: { "userId": userId } });
 
-                const siteAfterDelete = await jobkerProfile.findOne({ where: { Id: param.id } })
+                const siteAfterDelete = await jobker.findOne({ where: { "userId": userId } })
                     .catch(err => {
-                        ErrorHelpers.errorThrow(err, 'crudError', 'jobkerProfileService');
+                        ErrorHelpers.errorThrow(err, 'crudError', 'jobkerService');
                     });
 
                 if (siteAfterDelete) {
@@ -209,7 +253,7 @@ export default {
             }
 
         } catch (err) {
-            ErrorHelpers.errorThrow(err, 'crudError', 'jobkerProfileService');
+            ErrorHelpers.errorThrow(err, 'crudError', 'jobkerService');
         }
 
         return { status: 1 };
@@ -238,19 +282,22 @@ export default {
                 whereFilter = {...filter }
             }
 
-            finnalyResult = await jobkerProfile.findAll({
+            finnalyResult = await jobker.findAll({
                 where: whereFilter,
                 order: [sort],
-                include: [{
-                        model: roomjobkerProfile,
+                include: {
+                    model: users,
+                    as: 'user',
+                    attributes: {
+                        // include: [],
+                        exclude: ['password']
                     },
-                    // 'rooms'
-                ]
+                }
             }).catch(err => {
-                ErrorHelpers.errorThrow(err, 'getListError', 'jobkerProfileService')
+                ErrorHelpers.errorThrow(err, 'getListError', 'jobkerService')
             });
         } catch (err) {
-            ErrorHelpers.errorThrow(err, 'getListError', 'jobkerProfileService');
+            ErrorHelpers.errorThrow(err, 'getListError', 'jobkerService');
         }
 
         return finnalyResult;

@@ -1,7 +1,7 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-    return sequelize.define("employerProfile", {
+    return sequelize.define("jobker", {
         id: {
             type: DataTypes.INTEGER(20),
             allowNull: false,
@@ -13,36 +13,35 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER(20),
             field: 'user_id'
         },
-        companyName: {
-            type: DataTypes.STRING,
-            field: 'company_name'
-        },
-        companyWebsite: {
-            type: DataTypes.STRING,
-            field: 'company_website'
-        },
         address: {
             type: DataTypes.STRING,
             field: 'address'
         },
-        introduce: {
+        academic: {
             type: DataTypes.STRING,
-            field: 'introduce'
-        },
-        banner: {
-            type: DataTypes.STRING,
-            field: 'banner'
+            field: 'academic'
         },
         avatar: {
             type: DataTypes.STRING,
             field: 'avatar'
         },
-        member: {
+        cv: {
             type: DataTypes.STRING,
-            field: 'member'
+            field: 'cv'
+        },
+        jobPosition: {
+            type: DataTypes.STRING,
+            field: 'job_position',
+            get() {
+                const rawValue = this.getDataValue('jobPosition');
+                return rawValue ? rawValue.split('&&') : null;
+            },
+            set(val) {
+                this.setDataValue('jobPosition', val.join('&&'));
+            },
         }
     }, {
         timestamps: false,
-        tableName: 'employer_profile'
+        tableName: 'jobker'
     })
 };

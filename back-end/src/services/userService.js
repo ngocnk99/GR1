@@ -11,7 +11,8 @@ import ErrorHelpers from '../helpers/errorHelpers';
 import filterHelpers from '../helpers/filterHelpers';
 import preCheckHelpers, { TYPE_CHECK } from '../helpers/preCheckHelpers';
 import '../env';
-const { sequelize, Op, users, groupUsers, hospitals, /* userRegistrationClientIds */ } = models;
+const { getUserId } = require('../utils')
+const { roles } = models;
 
 export default {
     get_list: async param => {
@@ -19,7 +20,7 @@ export default {
 
         try {
             const { filter, range, sort, auth } = param;
-            // console.log(filter);
+            console.log('get user');
             let whereFilter = filter;
             const perPage = (range[1] - range[0]) + 1
             const page = Math.floor(range[0] / perPage);
@@ -42,12 +43,10 @@ export default {
                     // include: [],
                     exclude: ['password']
                 },
-                // include: [
-                //     { model: groupUsers, as: 'groupUsers' },
-                //     { model: hospitals, as: 'hospitals', attributes: ["id", "name", "address", "phone", "imageLogo"], },
-                //     { model: users, as: 'parent', attributes: ['username', 'fullname', 'mobile'] },
-                //     // { model: userRegistrationClientIds, as: 'userRegistrationClientIds' },
-                // ]
+                include: {
+                    model: roles,
+                    as: "role"
+                }
             }).catch(error => {
                 ErrorHelpers.errorThrow(error, 'getListError', 'UserServices');
             })
@@ -78,12 +77,10 @@ export default {
                     // include: [],
                     exclude: ['password']
                 },
-                // include: [
-                //     { model: groupUsers, as: 'groupUsers' },
-                //     { model: hospitals, as: 'hospitals', attributes: ["id", "name", "address", "phone", "imageLogo"], },
-                //     { model: users, as: 'parent', attributes: ['username', 'fullname', 'mobile'] },
-                //     // { model: userRegistrationClientIds, as: 'userRegistrationClientIds' },
-                // ]
+                include: {
+                    model: roles,
+                    as: "role"
+                }
             }).catch(error => {
                 ErrorHelpers.errorThrow(error, 'getInfoError', 'UserServices');
             });
@@ -154,16 +151,16 @@ export default {
 
         try {
             const { entity } = param;
-
+            const { userId } = getUserId(entity.token);
             const foundUser = await usersModel.findOne({
                 where: {
-                    id: param.id
+                    id: userId
                 }
             });
 
             if (foundUser) {
                 await usersModel.update(
-                    entity, { where: { id: parseInt(param.id) } }
+                    entity, { where: { id: userId } }
                 ).catch(error => {
                     throw (new ApiErrors.BaseError({
                         statusCode: 202,
@@ -172,7 +169,7 @@ export default {
                     }));
                 })
 
-                finnalyResult = await usersModel.findOne({ where: { id: param.id } }).catch(err => {
+                finnalyResult = await usersModel.findOne({ where: { id: userId } }).catch(err => {
                     throw err;
                 });
 
@@ -299,7 +296,10 @@ export default {
                 attributes: {
                     exclude: ['password']
                 },
-
+                include: {
+                    model: roles,
+                    as: "role"
+                }
             }).catch(error => {
                 ErrorHelpers.errorThrow(error, 'crudError', 'UserServices');
             });
@@ -373,7 +373,7 @@ export default {
                 console.log(passOk) //console.log
                 if (passOk) {
                     console.log("user: ", userInfo) //console.log
-                    const dataToken = { username: userInfo.username, id: userInfo.id, roleId: userInfo.roleId, email: userInfo.email }
+                    const dataToken = { username: userInfo.username, userId: userInfo.id, roleId: userInfo.roleId, email: userInfo.email }
                     const token = jwt.sign({
                             ...dataToken
                         },

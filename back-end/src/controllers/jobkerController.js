@@ -1,4 +1,4 @@
-import employerProfileService from '../services/employerProfileService'
+import jobkerService from '../services/jobkerService'
 import loggerHelpers from '../helpers/loggerHelpers';
 import { recordStartTime } from '../utils/loggerFormat';
 import { codeMessage } from '../utils';
@@ -8,7 +8,6 @@ import * as ApiErrors from '../errors';
 export default {
     get_list: (req, res, next) => {
         recordStartTime.call(req);
-        // console.log("param", req.param)
         console.log("locals", res.locals);
         try {
             const { sort, range, filter } = res.locals
@@ -19,7 +18,7 @@ export default {
                 auth: req.auth
             };
 
-            employerProfileService.get_list(param).then(data => {
+            jobkerService.get_list(param).then(data => {
                 const dataOutput = {
                     result: {
                         list: data.rows,
@@ -57,8 +56,8 @@ export default {
             const { id } = req.params;
             const param = { id, auth: req.auth }
 
-            // console.log("employerProfileService param: ", param)
-            employerProfileService.get_one(param).then(data => {
+            // console.log("jobkerService param: ", param)
+            jobkerService.get_one(param).then(data => {
                 res.send(data);
 
                 recordStartTime.call(res);
@@ -80,7 +79,7 @@ export default {
             const entity = res.locals.body ? res.locals.body : req.body;
             const param = { entity }
 
-            employerProfileService.create(param).then(data => {
+            jobkerService.create(param).then(data => {
                 if (data && data.result) {
                     const dataOutput = {
                         result: data.result,
@@ -111,7 +110,7 @@ export default {
             // const entity = req.body
             const param = { id, entity }
             console.log(param)
-            employerProfileService.update(param).then(data => {
+            jobkerService.update(param).then(data => {
                 if (data && data.result) {
                     const dataOutput = {
                         result: data.result,
@@ -142,10 +141,10 @@ export default {
         recordStartTime.call(req);
         try {
             const { id } = req.params;
-            // const entity = { Status: 0 }
-            const param = { id, auth: req.auth }
+            const entity = res.locals.body
+            const param = { id, entity }
 
-            employerProfileService.delete(param).then(data => {
+            jobkerService.delete(param).then(data => {
                 if (data && data.status === 1) {
                     const dataOutput = {
                         result: null,
@@ -187,7 +186,7 @@ export default {
                     auth: req.auth
                 };
 
-                employerProfileService.get_all(param).then(data => {
+                jobkerService.get_all(param).then(data => {
                     res.send({
                         result: data,
                         success: true,
